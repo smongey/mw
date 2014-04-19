@@ -22,10 +22,44 @@
  * ---------------------------------------------------------------------------
  */
 
-.header-primary {}
+#header-primary {
+	@include outer-container;
 
-.nav-primary {}
+}
+
+#logo {
+	@include span-columns(5);
+}
+
+#nav-primary {
+	@include span-columns(7);
+	background-color:red;
+}
 
 .content-primary {}
 
+
+/* - Footer -------------------------------------------------------------------------- */
+
+
 .footer-primary {}
+
+footer {
+	@include outer-container;
+}
+
+#footer1 {
+	@include span-columns(1);
+}
+
+#footer2 {
+	@include span-columns(4);
+}
+
+#footer3 {
+	@include span-columns(7);
+}
+
+.contact {
+	@include span-columns(2 of 7);
+}
