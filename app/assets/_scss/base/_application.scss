@@ -24,7 +24,6 @@
 
 #header-primary {
 	@include outer-container;
-
 }
 
 #logo {
@@ -33,7 +32,6 @@
 
 #nav-primary {
 	@include span-columns(7);
-	background-color:red;
 }
 
 .content-primary {}
