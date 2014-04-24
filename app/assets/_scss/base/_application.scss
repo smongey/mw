@@ -22,42 +22,83 @@
  * ---------------------------------------------------------------------------
  */
 
+
 #header-primary {
 	@include outer-container;
+	@include pad(3% 0% 4% 0%);
+
+	#logo {
+		@include span-columns(5);
+		font-size: $base-font-size * 1.5; 
+	}
+
+	#nav-primary {
+		@include span-columns(5);
+		li {
+			@include horizontal-li;
+			font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px;
+		}
+		a {
+			color: $base-font-color;
+			&:hover {
+				color: $blue
+			}
+		}
+	}
+
+	#social {
+		@include span-columns(2);
+		text-align: center;
+		li {
+			@include horizontal-li;
+		}
+	}
 }
 
-#logo {
-	@include span-columns(5);
-}
-
-#nav-primary {
-	@include span-columns(7);
-}
 
 .content-primary {}
 
 
 /* - Footer -------------------------------------------------------------------------- */
 
-
-.footer-primary {}
-
-footer {
+.footer-primary {
 	@include outer-container;
+	@include pad(3% 0% 4% 0%);
+	color: $green;
+
+
+	#footer1 {
+		@include span-columns(1);
+	}
+
+	#footer2 {
+		@include span-columns(4);
+		h5 {
+			padding-top: 3%;
+		}
+	}
+
+	#footer3 {
+		@include span-columns(7);
+		color: $blue;
+	}
+
+	.contact {
+	font-size: $base-font-size * 0.75;
+	line-height: $base-line-height * 0.99; 
+		@include row;
+
+		#c1 {
+			@include span-columns(8);
+		}
+		#c2 {
+			@include span-columns(4);
+		}
+		.c3 {
+			@include span-columns(4);
+			@include pad(5% 0% 0% 0%);
+		}
+	}
 }
 
-#footer1 {
-	@include span-columns(1);
-}
 
-#footer2 {
-	@include span-columns(4);
-}
-
-#footer3 {
-	@include span-columns(7);
-}
-
-.contact {
-	@include span-columns(2 of 7);
-}

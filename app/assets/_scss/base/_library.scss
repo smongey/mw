@@ -1,50 +1,211 @@
 
-/* -------------------------------------------------------- */
+/* ------------------------------------------------------ Home -- */
 
 section {
 	@include outer-container;
 }
 
-div#alpha {
-	@include span-columns(4);
+
+section#h1{
+	@include pad(3% 0% 4% 0%);
+
+	div#slider {
+		@include span-columns(10);
+		@include shift(1);
+		background-color: red;
+		height: 500px;
+	}
 }
 
-div#beta {
+
+section#h2{
+	@include pad(3% 0% 4% 0%);
+
+	div#clocks {
+		@include span-columns(5);
+		li {
+			@include horizontal-li;
+		}
+	}
+
+	div#intro_text {
+		@include span-columns(6);
+	}
+}
+
+
+section#h3{
+	@include pad(3% 0% 4% 0%);
+
+	div#services1 {
+		@include span-columns(2);
+		@include shift(1);
+	}
+
+	div#services2 {
+		@include span-columns(2);
+	}
+
+	div#services3 {
+		@include span-columns(2);
+	}
+
+	div#services_text {
+		@include span-columns(4);
+		background-color: white;
+		h3 {
+			color: $green;
+			@include pad(10% 10% 10% 10%);
+		}
+	}
+}
+
+
+section#h4{
+	@include pad(3% 0% 4% 0%);
+
+	div#issuu_text {
+		@include span-columns(4);
+		@include shift(1);
+
+		h3 {
+			@include pad(4% 0% 0% 0%);
+		}
+	}
+
+	div#issuu_embed {
+		@include span-columns(6);
+	}
+}
+
+
+
+/* ------------------------------------------------------ About -- */
+
+section#a1 {
+	@include pad(3% 0% 4% 0%);
+
+	div#about_text {
+		@include span-columns(6);
+		@include shift(5);
+	}
+}
+
+
+section#a2 {
+	@include pad(3% 0% 4% 0%);
+	
+	div#people {
+		@include span-columns(10);
+		@include shift(1);
+
+		li.block {
+		  @include span-columns(4);
+		  @include omega(3n);
+		  background-color:red;
+		  margin-bottom: 30px;
+		}
+	}
+}
+
+
+
+/* ------------------------------------------------------ Products -- */
+
+section#p1 {
+	@include pad(3% 0% 4% 0%);
+	
+	div#product1, div#service1 {
+		@include span-columns(7);
+		@include shift(1)
+	}
+
+	div#product2, div#service2 {
+		@include span-columns(3);
+	}
+}
+
+
+section#p2 {
+	@include pad(3% 0% 4% 0%);
+
+	div#product_desc1, div#service_desc1 {
+		@include span-columns(5);
+		@include shift(2);
+	}
+
+	div#product_desc2, div#service_desc2  {
+		@include span-columns(3);
+	}
+}
+
+
+
+/* ------------------------------------------------------ Services -- */
+
+section#s1 {
+	@include pad(3% 0% 4% 0%);
+}
+
+
+section#s2{
+	@include pad(3% 0% 4% 0%);
+}
+
+
+section#s3 {
+	@include pad(3% 0% 4% 0%);
+
+	div#issuu_text_services {
+		@include span-columns(3);
+		@include shift(2);
+	}
+
+	div#issuu_embed_services {
+		@include span-columns(5);
+	}
+}
+
+
+section#s4 {
+	@include pad(3% 0% 4% 0%);
+
+	div#services_pricing {
+		@include span-columns(6);
+		@include shift(2);
+	}
+}
+
+
+
+/* ------------------------------------------------------ News -- */
+
+.n_title {
+	@include span-columns(7);
+	@include shift(5);
+}
+
+.n_wrap {
+	@include pad(3% 0% 4% 0%);
 	@include span-columns(8);
-}
+	@include shift(4);
 
-div#home_slider {
-	@include span-columns(10);
-	@include shift(1);
-	background-color: red;
+	.n_entry {
+		@include row;
+		@include span-columns(11);
+		margin-left: 5%;
+		.n_text {
+			@include pad(9% 9% 9% 9%);
+			background-color: white;
+		}
 }
-
-div#clocks {
-	@include span-columns(5);
-}
-
-div#intro_text {
-	@include span-columns(6);
-}
-
-div#services1 {
-	@include span-columns(2);
-}
-
-div#services2 {
-	@include span-columns(2);
-}
-
-div#services3 {
-	@include span-columns(2);
 
 }
 
-div#services_text {
-	@include span-columns(4);
-}
 
-/* -------------------------------------------------------- */
 
-.bg-blue {background-color: blue;}
-.bg-grey {background-color: silver	;}
+
+
+
+
+

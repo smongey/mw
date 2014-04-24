@@ -14,6 +14,46 @@
     <!-- build:js({app,.tmp}) /assets/js/modernizr.js -->
     <script src="/_bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+     <script type="text/javascript">
+        
+            function draw_clock(){
+                canvas = Raphael("clock_id",200, 200);
+                var clock = canvas.circle(100,100,95);
+                 clock.attr({"fill":"#f5f5f5","stroke":"#444444","stroke-width":"5"})  
+                 var hour_sign;
+                for(i=0;i<12;i++){
+                    var start_x = 100+Math.round(80*Math.cos(30*i*Math.PI/180));
+                    var start_y = 100+Math.round(80*Math.sin(30*i*Math.PI/180));
+                    var end_x = 100+Math.round(90*Math.cos(30*i*Math.PI/180));
+                    var end_y = 100+Math.round(90*Math.sin(30*i*Math.PI/180));    
+                    hour_sign = canvas.path("M"+start_x+" "+start_y+"L"+end_x+" "+end_y);
+                }    
+                hour_hand = canvas.path("M100 100L100 50");
+                hour_hand.attr({stroke: "#444444", "stroke-width": 6});
+                minute_hand = canvas.path("M100 100L100 40");
+                minute_hand.attr({stroke: "#444444", "stroke-width": 4});
+                second_hand = canvas.path("M100 110L100 25");
+                second_hand.attr({stroke: "#444444", "stroke-width": 2}); 
+                var pin = canvas.circle(100, 100, 5);
+                pin.attr("fill", "#000000");    
+                update_clock()
+                setInterval("update_clock()",1000);
+            }
+            
+            function update_clock(){
+                var now = new Date();
+                var hours = now.getHours();
+                var minutes = now.getMinutes();
+                var seconds = now.getSeconds();
+                hour_hand.rotate(30*hours+(minutes/2.5), 100, 100);
+                minute_hand.rotate(6*minutes, 100, 100);
+                second_hand.rotate(6*seconds, 100, 100);
+                
+            }
+        
+        </script>
+        
   </head>
 
   <body>
@@ -23,19 +63,26 @@
 
     <header id="header-primary" class="header-primary">
     <div id="logo">
-        Maurice Ward
+        <strong>Maurice Ward</strong><br />
+        Art Handling
     </div>
      <nav id="nav-primary" class="nav-primary">
         <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Products</li>
-            <li>News</li>
-            <li>Contacts</li>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Contacts</a></li>
         </ul>
     </nav>
-
+    <div id="social" class="">
+        <ul>
+            <li><a href="">F</a></li>
+            <li><a href="">T</a></li>
+            <li><a href="">EN.</a></li>
+        </ul>
+    </div>
     </header>
 
 
@@ -47,42 +94,59 @@
     <footer id="footer-primary" class="footer-primary">
         <div id="footer1"><img src="xxx"/></div>
         <div id="footer2">
-            Maurice Ward<br />
-            Group<br />
+            <strong>Maurice Ward<br />
+            Group<br /></strong>
             Estd. 1968<br />
 
-            Inspired by Pioneers.<br />
+            <h5>Inspired by Pioneers.<br />
             Run by Independents.<br />
-            Managed with Integrity.
+            Managed with Integrity.</h5>
         </div>
         <div id="footer3">
             <div class="contact">
-                Maurice Ward<br />
-                Group<br />
-                Estd. 1968<br />
-
-                Inspired by Pioneers.<br />
-                Run by Independents.<br />
-                Managed with Integrity.
-             </div>
+                <div id="c1">
+                    <strong>Maurice Ward Art Handling</strong><br />
+                    Contact details:
+                </div>
+                <div id="c2">
+                    Accreditation
+                </div>
+            </div>
             <div class="contact">
-                Maurice Ward<br />
-                Group<br />
-                Estd. 1968<br />
-
-                Inspired by Pioneers.<br />
-                Run by Independents.<br />
-                Managed with Integrity.
-             </div>
-            <div class="contact">
-                Maurice Ward<br />
-                Group<br />
-                Estd. 1968<br />
-
-                Inspired by Pioneers.<br />
-                Run by Independents.<br />
-                Managed with Integrity.
-             </div>
+                <div class="c3">
+                    <strong>Dublin:</strong><br />
+                    Maurice Ward + Co. Ltd.<br />
+                    Unit J 10, Swords Business Park<br />
+                    Swords, Co. Dublin<br />
+                    Rep. of Ireland.<br />
+                    <br />
+                    T. (+353) 1 840 9099<br />
+                    F. (+353) 1 840 9238<br />
+                    E. movingart@mauriceward.com
+                 </div>
+                <div class="c3">
+                    <strong>Dublin:</strong><br />
+                    Maurice Ward + Co. Ltd.<br />
+                    Unit J 10, Swords Business Park<br />
+                    Swords, Co. Dublin<br />
+                    Rep. of Ireland.<br />
+                    <br />
+                    T. (+353) 1 840 9099<br />
+                    F. (+353) 1 840 9238<br />
+                    E. movingart@mauriceward.com
+                 </div>
+                <div class="c3">
+                    <strong>Dublin:</strong><br />
+                    Maurice Ward + Co. Ltd.<br />
+                    Unit J 10, Swords Business Park<br />
+                    Swords, Co. Dublin<br />
+                    Rep. of Ireland.<br />
+                    <br />
+                    T. (+353) 1 840 9099<br />
+                    F. (+353) 1 840 9238<br />
+                    E. movingart@mauriceward.com
+                 </div>
+            </div>
         </div>
     </footer>
 
