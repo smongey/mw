@@ -24,14 +24,23 @@
 
 
 #header-primary {
+	background-color: white;
+	height:340px;
 	@include outer-container;
-	@include pad(3% 0% 4% 0%);
+	@include pad(60px 0% 4% 0%);
 
 	#logo {
 		@include span-columns(5);
 		font-size: $base-font-size * 1.5; 
+		div#mark {
+			@include span-columns(1 of 5);
+		}
+		div#wordmark {
+			@include span-columns(4 of 5);
+		}
 	}
 
+	
 	#nav-primary {
 		@include span-columns(5);
 		li {

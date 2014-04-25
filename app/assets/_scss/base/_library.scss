@@ -8,6 +8,7 @@ section {
 
 section#h1{
 	@include pad(3% 0% 4% 0%);
+	background-color: white;
 
 	div#slider {
 		@include span-columns(10);
@@ -20,11 +21,16 @@ section#h1{
 
 section#h2{
 	@include pad(3% 0% 4% 0%);
+	background-color: white;
 
 	div#clocks {
-		@include span-columns(5);
+		
+		@include span-columns(4);
+		@include shift(1);
+		color: $blue;
 		li {
 			@include horizontal-li;
+			text-align:center;
 		}
 	}
 
@@ -35,24 +41,40 @@ section#h2{
 
 
 section#h3{
-	@include pad(3% 0% 4% 0%);
+	@include pad(6% 0% 4% 0%);
+
+	div.wrap {
+		@include shift(1);
+		@include span-columns(10);
+		background-color: white;
+	}
 
 	div#services1 {
 		@include span-columns(2);
-		@include shift(1);
+		width:23.33333%;
+		margin: 0;
 	}
 
 	div#services2 {
 		@include span-columns(2);
+		width:23.33333%;
+		margin: 0;
 	}
 
 	div#services3 {
 		@include span-columns(2);
+		width:23.33333%;
+		margin: 0;
+	}
+
+	div.s_text {
+		@include pad(3% 4% 4% 7%);
 	}
 
 	div#services_text {
 		@include span-columns(4);
 		background-color: white;
+		width:30%;
 		h3 {
 			color: $green;
 			@include pad(10% 10% 10% 10%);
@@ -62,19 +84,29 @@ section#h3{
 
 
 section#h4{
-	@include pad(3% 0% 4% 0%);
 
-	div#issuu_text {
-		@include span-columns(4);
+	@include pad(3% 0% 4% 0%);
+	div.wrap {
 		@include shift(1);
+		@include span-columns(10);
+		background-color: $blue;
+
+	}
+	div#issuu_text {
+		@include span-columns(4 of 10);
+		margin: 0;
+		width:40%;
 
 		h3 {
-			@include pad(4% 0% 0% 0%);
+			@include pad(6% 6% 6% 6%);
+			color: white;
 		}
 	}
 
 	div#issuu_embed {
-		@include span-columns(6);
+		@include span-columns(6 of 10);
+		width:60%;
+		margin: 0;
 	}
 }
 
@@ -84,6 +116,7 @@ section#h4{
 
 section#a1 {
 	@include pad(3% 0% 4% 0%);
+	background-color: white;
 
 	div#about_text {
 		@include span-columns(6);
@@ -94,6 +127,7 @@ section#a1 {
 
 section#a2 {
 	@include pad(3% 0% 4% 0%);
+	background-color: white;
 	
 	div#people {
 		@include span-columns(10);
@@ -102,8 +136,13 @@ section#a2 {
 		li.block {
 		  @include span-columns(4);
 		  @include omega(3n);
-		  background-color:red;
+		  background-color:$blue;
+		  color: white;
 		  margin-bottom: 30px;
+		  p {
+		  	@include pad(3% 0% 3% 6%);
+		  }
+		  @include link-blue;
 		}
 	}
 }
@@ -115,12 +154,12 @@ section#a2 {
 section#p1 {
 	@include pad(3% 0% 4% 0%);
 	
-	div#product1, div#service1 {
+	div#product1 {
 		@include span-columns(7);
 		@include shift(1)
 	}
 
-	div#product2, div#service2 {
+	div#product2 {
 		@include span-columns(3);
 	}
 }
@@ -129,12 +168,12 @@ section#p1 {
 section#p2 {
 	@include pad(3% 0% 4% 0%);
 
-	div#product_desc1, div#service_desc1 {
+	div#product_desc1 {
 		@include span-columns(5);
 		@include shift(2);
 	}
 
-	div#product_desc2, div#service_desc2  {
+	div#product_desc2 {
 		@include span-columns(3);
 	}
 }
@@ -145,40 +184,102 @@ section#p2 {
 
 section#s1 {
 	@include pad(3% 0% 4% 0%);
+
+	div#service1 {
+		@include span-columns(7);
+		@include shift(1);
+		@include omega;
+	}
+
+	div#service2 {
+		@include span-columns(3);
+		@include omega;
+		@include pad(2% 2% 2% 2%);
+		background-color: $black;
+		color: white;
+		
+		h2 {
+		@include pad(15% 0% 30% 0%);
+		}
+	}
 }
 
 
 section#s2{
-	@include pad(3% 0% 4% 0%);
+	@include pad(0% 0% 0% 0%);
+	
+
+	div.wrap{
+		margin-top: -7.5%;
+		@include span-columns(8);
+		@include shift(2);
+		background-color: white;
+	}
+	div#service_desc1 {
+		@include copy;
+		@include pad(30px 2% 30px 5%);
+		@include span-columns(5 of 8);
+		@include omega;
+		border-right: 1px dotted $blue;
+
+		.sd_block{
+			@include pad(3% 0% 4% 0%);
+		}
+	}
+
+	div#service_desc2  {
+		@include pad(30px 2% 30px 5%);
+		@include span-columns(3 of 8);
+		color: $blue;
+	}
 }
 
 
 section#s3 {
-	@include pad(3% 0% 4% 0%);
+	div.wrap {
+		@include span-columns(8);
+		@include shift(2);
+		background-color: $blue;
+
+	}
 
 	div#issuu_text_services {
-		@include span-columns(3);
-		@include shift(2);
+		@include span-columns(3 of 8);
+		margin: 0;
+		width:40%;
+		@include copy;
+		color:white;
+		@include pad(30px 2% 30px 5%);
+
 	}
 
 	div#issuu_embed_services {
-		@include span-columns(5);
+		@include span-columns(5 of 8);
+		width:60%;
+		margin: 0;
 	}
 }
 
 
+
 section#s4 {
-	@include pad(3% 0% 4% 0%);
+	@include pad(0% 0% 3% 0%);
 
 	div#services_pricing {
-		@include span-columns(6);
+		background-color: white;
+		@include span-columns(8);
 		@include shift(2);
+		@include pad(30px 1% 30px 3%);
 	}
 }
 
 
 
 /* ------------------------------------------------------ News -- */
+
+#stage {
+	margin-top:-11%;	
+}
 
 .n_title {
 	@include span-columns(7);
@@ -194,18 +295,29 @@ section#s4 {
 		@include row;
 		@include span-columns(11);
 		margin-left: 5%;
+		padding-bottom: 10%;
+
+		.n_img {
+			margin-bottom:-10px;
+		}
+		
 		.n_text {
-			@include pad(9% 9% 9% 9%);
+			@include pad(7% 9% 9% 9%);
 			background-color: white;
+			width: 88%;
+			@include copy;
+			color: $dark-gray;
+
+			p {
+				margin-bottom: 10%;
+			}
 		}
 }
 
 }
 
 
-
-
-
+.bg-gray {background-color: $light-gray;}
 
 
 

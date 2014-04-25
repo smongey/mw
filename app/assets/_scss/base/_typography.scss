@@ -40,7 +40,12 @@ h6 {
 }
 
 p {
-  margin: 0 0 ($base-line-height * .5);
+  margin: 0 0 ($base-line-height * .5);  
+}
+
+.secondary {
+  font-size: $base-font-size * 0.5;
+  line-height: 1.5em; 
 }
 
 a {
