@@ -12,14 +12,97 @@
   }
 }
 
-
-
-@mixin link-blue {
+@mixin link-white {
 	a {
-		color:white;
+		color: white;
 
-		&:hover {
-			color: $light-gray;
-		}
+    &:visited {
+      color: white;
+    }
+
+    &:hover,
+    &:active {
+      color: $dark-gray;
+    }
 	}
 }
+
+@mixin link-blue {
+  a {
+    color: $blue;
+
+    &:visited {
+      color: $blue;
+    }
+
+    &:hover,
+    &:active {
+      color: $dark-gray;
+    }
+  }
+}
+
+@mixin link-black {
+  a {
+    color: $black;
+
+    &:visited {
+      color: $black;
+    }
+
+    &:hover,
+    &:active {
+      color: white;
+    }
+  }
+}
+
+@mixin link-gray {
+  a {
+    color: $medium-gray;
+
+    &:visited {
+      color: $medium-gray;
+    }
+
+    &:hover,
+    &:active {
+      color: $dark-gray;
+    }
+  }
+}
+
+@mixin link-green {
+  a {
+    color: $green;
+
+    &:visited {
+      color: $green;
+    }
+
+    &:hover,
+    &:active {
+      color: $dark-gray;
+    }
+  }
+}
+
+@mixin link-blue-ul {
+  a {
+    color: $blue;
+    border-bottom: 1px solid $blue;
+
+    &:visited {
+      color: $blue;
+      border-bottom: 1px solid $blue;
+    }
+
+    &:hover,
+    &:active {
+      color: $blue;
+      border-bottom: 0px solid $blue;
+    }
+  }
+}
+
+

@@ -74,7 +74,10 @@
 	@include outer-container;
 	@include pad(3% 0% 4% 0%);
 	color: $green;
-
+	#name {
+		font-size: 15px;
+		line-height: $base-line-height * 0.70; 
+	}
 
 	#footer1 {
 		@include span-columns(1);
@@ -83,7 +86,9 @@
 	#footer2 {
 		@include span-columns(4);
 		h5 {
-			padding-top: 3%;
+			padding-top: 4%;
+			line-height: $base-line-height * 1; 
+			font-weight: normal;
 		}
 	}
 
@@ -93,8 +98,9 @@
 	}
 
 	.contact {
-	font-size: $base-font-size * 0.75;
-	line-height: $base-line-height * 0.99; 
+		font-size: $base-font-size * 0.75;
+		line-height: $base-line-height * 0.99; 
+		@include link-blue;
 		@include row;
 
 		#c1 {

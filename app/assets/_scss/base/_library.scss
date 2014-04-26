@@ -20,7 +20,7 @@ section#h1{
 
 
 section#h2{
-	@include pad(3% 0% 4% 0%);
+	@include pad(3% 0% 7% 0%);
 	background-color: white;
 
 	div#clocks {
@@ -121,6 +121,7 @@ section#a1 {
 	div#about_text {
 		@include span-columns(6);
 		@include shift(5);
+		@include link-blue-ul;
 	}
 }
 
@@ -142,7 +143,7 @@ section#a2 {
 		  p {
 		  	@include pad(3% 0% 3% 6%);
 		  }
-		  @include link-blue;
+		  @include link-white;
 		}
 	}
 }
@@ -156,25 +157,54 @@ section#p1 {
 	
 	div#product1 {
 		@include span-columns(7);
-		@include shift(1)
+		@include shift(1);
+		@include omega;
 	}
 
 	div#product2 {
 		@include span-columns(3);
+		@include omega;
+		@include pad(2% 2% 2% 2%);
+		background-color: $blue;
+		color: $black;
+		
+		h2 {
+		@include pad(15% 0% 30% 0%);
+		}
 	}
 }
 
 
 section#p2 {
-	@include pad(3% 0% 4% 0%);
+	@include pad(0% 0% 5% 0%);
+
+	div.wrap{
+		margin-top: -7.5%;
+		@include span-columns(8);
+		@include shift(2);
+		background-color: white;
+	}
 
 	div#product_desc1 {
-		@include span-columns(5);
-		@include shift(2);
+		@include copy;
+		@include pad(30px 2% 30px 5%);
+		@include span-columns(5 of 8);
+		@include omega;
+
+		.p_block{
+			@include pad(3% 5% 4% 0%);
+			border-right: 1px dotted $blue;
+			.secondary {
+				@include link-blue;
+			}
+		}
 	}
 
 	div#product_desc2 {
-		@include span-columns(3);
+		@include pad(30px 2% 30px 2%);
+		@include span-columns(3 of 8);
+		color: $blue;
+		@include link-blue;
 	}
 }
 
@@ -220,17 +250,21 @@ section#s2{
 		@include pad(30px 2% 30px 5%);
 		@include span-columns(5 of 8);
 		@include omega;
-		border-right: 1px dotted $blue;
 
 		.sd_block{
-			@include pad(3% 0% 4% 0%);
+			@include pad(3% 5% 4% 0%);
+			border-right: 1px dotted $blue;
+			.secondary {
+				@include link-blue;
+			}
 		}
 	}
 
 	div#service_desc2  {
-		@include pad(30px 2% 30px 5%);
+		@include pad(30px 2% 30px 2%);
 		@include span-columns(3 of 8);
 		color: $blue;
+		@include link-blue;
 	}
 }
 
