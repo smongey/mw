@@ -59,15 +59,15 @@
 
 @mixin link-gray {
   a {
-    color: $medium-gray;
+    color: $dark-gray;
 
     &:visited {
-      color: $medium-gray;
+      color: $dark-gray;
     }
 
     &:hover,
     &:active {
-      color: $dark-gray;
+      color: $medium-gray;
     }
   }
 }
@@ -105,4 +105,37 @@
   }
 }
 
+@mixin link-gray-ul {
+  a {
+    color: $dark-gray;
+    border-bottom: 1px solid $dark-gray;
 
+    &:visited {
+      color: $dark-gray;
+      border-bottom: 1px solid $dark-gray;
+    }
+
+    &:hover,
+    &:active {
+      color: $dark-gray;
+      border-bottom: 0px solid $dark-gray;
+    }
+  }
+}
+
+@mixin nav-ul {
+  a {
+    color: $base-font-color;
+    padding-bottom: 3px;
+
+    &:visited {
+      color: $base-font-color;
+    }
+
+    &:hover,
+    &:active {
+      color: $base-font-color;
+      border-bottom: 3px solid $blue;
+    }
+  }
+}

@@ -28,6 +28,7 @@ section#h2{
 		@include span-columns(4);
 		@include shift(1);
 		color: $blue;
+		
 		li {
 			@include horizontal-li;
 			text-align:center;
@@ -255,7 +256,7 @@ section#s2{
 			@include pad(3% 5% 4% 0%);
 			border-right: 1px dotted $blue;
 			.secondary {
-				@include link-blue;
+				@include link-gray-ul;
 			}
 		}
 	}
@@ -264,7 +265,7 @@ section#s2{
 		@include pad(30px 2% 30px 2%);
 		@include span-columns(3 of 8);
 		color: $blue;
-		@include link-blue;
+		@include link-blue-ul;
 	}
 }
 
@@ -338,12 +339,19 @@ section#s4 {
 		.n_text {
 			@include pad(7% 9% 9% 9%);
 			background-color: white;
-			width: 88%;
+			width: 90%;
 			@include copy;
 			color: $dark-gray;
 
 			p {
 				margin-bottom: 10%;
+				&:last-child {
+					margin-bottom: 00%;
+				}
+			}
+
+			.secondary {
+				@include link-gray-ul;
 			}
 		}
 }

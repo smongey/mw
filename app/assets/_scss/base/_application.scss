@@ -24,9 +24,8 @@
 
 
 #header-primary {
-	background-color: white;
-	height:340px;
 	@include outer-container;
+	background-color: white;
 	@include pad(60px 0% 4% 0%);
 
 	#logo {
@@ -40,26 +39,48 @@
 		}
 	}
 
-	
-	#nav-primary {
-		@include span-columns(5);
-		li {
-			@include horizontal-li;
-			font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px;
-		}
-		a {
-			color: $base-font-color;
-			&:hover {
-				color: $blue
+	div#nav-wrap {
+		@include span-columns(7);
+
+		#nav-primary {
+			@include row;
+			@include span-columns(9);
+			@include nav-ul;
+
+			li {
+				@include horizontal-li;
+				font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px;
 			}
 		}
-	}
 
-	#social {
-		@include span-columns(2);
-		text-align: center;
-		li {
-			@include horizontal-li;
+		#social {
+			@include span-columns(2);
+			text-align: center;
+			font-size: 14px;
+
+			li {
+				@include horizontal-li;
+				padding-right:6%;
+				
+				#toggle_lang {
+					font-size: 16px;
+				}
+			}
+		}
+
+		#dropdownS {
+			@include row;
+			@include pad(80px 2% 4% 0);
+
+
+			.test {
+				@include span-columns(2);
+				width: 16%;
+				@include omega(5n);
+				background-color: $black;
+				@include pad(10px 2% 4% 10px);
+				@include link-blue;
+			}
 		}
 	}
 }
@@ -74,6 +95,7 @@
 	@include outer-container;
 	@include pad(3% 0% 4% 0%);
 	color: $green;
+
 	#name {
 		font-size: 15px;
 		line-height: $base-line-height * 0.70; 
@@ -103,11 +125,17 @@
 		@include link-blue;
 		@include row;
 
+	
 		#c1 {
 			@include span-columns(8);
 		}
 		#c2 {
 			@include span-columns(4);
+			margin-top: -10px;
+			.icon-acc {
+			font-size: 24px;
+		}
+
 		}
 		.c3 {
 			@include span-columns(4);
