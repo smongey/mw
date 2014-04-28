@@ -31,7 +31,7 @@
 	#logo {
 		@include span-columns(5);
 		font-size: $base-font-size * 1.5; 
-		
+
 		div#mark {
 			@include span-columns(1 of 5);
 		}
@@ -91,7 +91,6 @@
 			position: absolute;
 			@include row;
 			@include pad(80px 2% 4% 0);
-			display: none;
 
 			.box {
 				@include span-columns(2);
