@@ -31,6 +31,7 @@
 	#logo {
 		@include span-columns(5);
 		font-size: $base-font-size * 1.5; 
+		
 		div#mark {
 			@include span-columns(1 of 5);
 		}
@@ -46,6 +47,7 @@
 			@include row;
 			@include span-columns(9);
 			@include nav-ul;
+			height: 200px;
 
 			li {
 				@include horizontal-li;
@@ -57,6 +59,7 @@
 			@include span-columns(2);
 			text-align: center;
 			font-size: 14px;
+			@include link-blue;
 
 			li {
 				@include horizontal-li;
@@ -69,17 +72,34 @@
 		}
 
 		#dropdownS {
+			position: absolute;
 			@include row;
 			@include pad(80px 2% 4% 0);
+			display: none;
 
-
-			.test {
+			.box {
 				@include span-columns(2);
 				width: 16%;
 				@include omega(5n);
 				background-color: $black;
 				@include pad(10px 2% 4% 10px);
 				@include link-blue;
+			}
+		}
+
+		#dropdownP {
+			position: absolute;
+			@include row;
+			@include pad(80px 2% 4% 0);
+			display: none;
+
+			.box {
+				@include span-columns(2);
+				width: 16%;
+				@include omega(5n);
+				background-color: $blue;
+				@include pad(10px 2% 4% 10px);
+				@include link-black;
 			}
 		}
 	}

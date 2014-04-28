@@ -13,7 +13,7 @@ section#h1{
 	div#slider {
 		@include span-columns(10);
 		@include shift(1);
-		background-color: red;
+		background-color: $lightest-gray;
 		height: 500px;
 	}
 }
@@ -28,7 +28,7 @@ section#h2{
 		@include span-columns(4);
 		@include shift(1);
 		color: $blue;
-		
+
 		li {
 			@include horizontal-li;
 			text-align:center;
@@ -54,18 +54,24 @@ section#h3{
 		@include span-columns(2);
 		width:23.33333%;
 		margin: 0;
+		color: $blue;
+		@include link-blue;
 	}
 
 	div#services2 {
 		@include span-columns(2);
 		width:23.33333%;
 		margin: 0;
+		background-color: $lightest-gray;
+		@include link-gray;
 	}
 
 	div#services3 {
 		@include span-columns(2);
 		width:23.33333%;
 		margin: 0;
+		background-color: $lightest-gray;
+		@include link-gray;
 	}
 
 	div.s_text {
@@ -167,10 +173,11 @@ section#p1 {
 		@include omega;
 		@include pad(2% 2% 2% 2%);
 		background-color: $blue;
-		color: $black;
-		
+		color: $black;		
+		height: 320px;
+
 		h2 {
-		@include pad(15% 0% 30% 0%);
+			@include pad(15% 0% 30% 0%);
 		}
 	}
 }
@@ -195,8 +202,9 @@ section#p2 {
 		.p_block{
 			@include pad(3% 5% 4% 0%);
 			border-right: 1px dotted $blue;
+			
 			.secondary {
-				@include link-blue;
+				@include link-gray-ul;
 			}
 		}
 	}
@@ -228,9 +236,10 @@ section#s1 {
 		@include pad(2% 2% 2% 2%);
 		background-color: $black;
 		color: white;
-		
+		height: 320px;
+
 		h2 {
-		@include pad(15% 0% 30% 0%);
+			@include pad(15% 0% 30% 0%);
 		}
 	}
 }
@@ -255,6 +264,7 @@ section#s2{
 		.sd_block{
 			@include pad(3% 5% 4% 0%);
 			border-right: 1px dotted $blue;
+
 			.secondary {
 				@include link-gray-ul;
 			}
@@ -305,6 +315,48 @@ section#s4 {
 		@include span-columns(8);
 		@include shift(2);
 		@include pad(30px 1% 30px 3%);
+
+		#s_tabs_head {
+			@include span-columns(6 of 8);
+			@include pad(0 0 15px 0%);
+			border-bottom: 1px solid $light-gray;
+			
+			.s_head li {
+				@include horizontal-li;
+				font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px;
+				@include link-gray;
+
+				a:active {
+					font-weight: bold;
+				}
+			}
+		}
+
+		#s_tabs_content {
+			@include span-columns(6 of 8);
+			@include pad(3% 0% 3% 0%);
+
+			#destination {
+				@include span-columns(4 of 6);
+			}
+
+			#small {
+				@include span-columns(1 of 6);
+			}
+
+			#large {
+				@include span-columns(1 of 6);
+			}
+
+			.lead {
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-size: 13px;
+				padding-bottom: 20px;
+				color: $black;
+
+			}
+		}
 	}
 }
 
@@ -334,6 +386,17 @@ section#s4 {
 
 		.n_img {
 			margin-bottom:-10px;
+			
+			img {
+				min-width:100%;
+			}
+		}
+		
+		.perma {
+			position: absolute;
+			left: 35.5%;
+			font-size: 50px;
+			@inlcude link-blue;
 		}
 		
 		.n_text {
@@ -361,5 +424,5 @@ section#s4 {
 
 .bg-gray {background-color: $light-gray;}
 
-
+img {min-width:100%}
 

@@ -67,7 +67,7 @@
 
     &:hover,
     &:active {
-      color: $medium-gray;
+      color: $blue;
     }
   }
 }
@@ -127,6 +127,8 @@
   a {
     color: $base-font-color;
     padding-bottom: 3px;
+    padding-left: 1px;
+    padding-right: 2px;
 
     &:visited {
       color: $base-font-color;
