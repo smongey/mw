@@ -11,10 +11,14 @@
 
     {% include styles.html %}
 
+    <script src="/_bower_components/jquery/jquery.min.js"></script>
+
+
     <!-- build:js({app,.tmp}) /assets/js/modernizr.js -->
     <script src="/_bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-   
+
+
         
   </head>
 
@@ -39,7 +43,6 @@
                     <li><a href="/services">Services</a></li>
                     <li><a href="/products">Products</a></li>
                     <li><a href="/news">News</a></li>
-                    <li><a href="/contacts">Contacts</a></li>
                 </ul>
             </nav>
             <div id="social" class="">
@@ -104,7 +107,7 @@
     </section>
 
     <footer id="footer-primary" class="footer-primary">
-        <div id="footer1"><img src="xxx"/></div>
+        <div id="footer1"><div id="plane"></div></div>
         <div id="footer2">
             <p id="name"><strong>Maurice Ward<br />
             Group<br /></strong>
@@ -168,5 +171,14 @@
 
     {% include scripts.html %}
     {% include google-analytics.html %}
+<script>
+$(document).ready(function () {
+  
+  var planes = ['p1', 'p2', 'p3', 'p4', 'p5'];
+  var funk = Math.floor(Math.random() * planes.length);
+  $('#plane').removeClass().addClass(planes[funk]);
+
+});
+</script>
   </body>
 </html>

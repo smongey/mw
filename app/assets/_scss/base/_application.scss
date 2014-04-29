@@ -91,6 +91,7 @@
 			position: absolute;
 			@include row;
 			@include pad(80px 2% 4% 0);
+			display: none;
 
 			.box {
 				@include span-columns(2);
@@ -122,6 +123,21 @@
 
 	#footer1 {
 		@include span-columns(1);
+		margin-right:0%;
+		width:8.5%;
+		#plane {
+			width: 70%;
+			margin-left: 25%;
+			margin-right: 5%;
+			height:100px;
+			margin-top: -20px;
+		}
+		.p1 { background-image:url('/assets/img/planes/p1.png');background-size:contain;background-repeat: no-repeat;background-position: right top;}
+		.p2 { background-image:url('/assets/img/planes/p2.png');background-size:contain;background-repeat: no-repeat;background-position: right top;}
+		.p3 { background-image:url('/assets/img/planes/p3.png');background-size:contain;background-repeat: no-repeat;background-position: right top;}
+		.p4 { background-image:url('/assets/img/planes/p4.png');background-size:contain;background-repeat: no-repeat;background-position: right top;}
+		.p5 { background-image:url('/assets/img/planes/p5.png');background-size:contain;background-repeat: no-repeat;background-position: right top;}
+
 	}
 
 	#footer2 {
