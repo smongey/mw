@@ -17,6 +17,7 @@
     <!-- build:js({app,.tmp}) /assets/js/modernizr.js -->
     <script src="/_bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
 
         
@@ -26,22 +27,25 @@
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
+    <div id="h_wrap">
     <header id="header-primary" class="header-primary">
         <div id="logo">
-            <div id="mark"><img src="x"></div>
-            <div id="wordmark">
-                <strong>Maurice Ward</strong><br />
-                Art Handling
-            </div>
+            <img src="/assets/img/mw-full.png" alt="Maurice Ward Art Handling"/>
+            <!--<a href="/">
+                <div id="mark"><img src="/assets/img/mw.png"></div>
+                <div id="wordmark">
+                    <strong>Maurice Ward</strong><br />
+                    Art Handling
+                </div>
+            </a>-->
         </div>
         <div id="nav-wrap">
             <nav id="nav-primary" class="nav-primary">
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
-                    <li><a href="/services">Services</a></li>
-                    <li><a href="/products">Products</a></li>
+                    <li class="services"><a href="/services">Services</a></li>
+                    <li class="products"><a href="/products" id="#products">Products</a></li>
                     <li><a href="/news">News</a></li>
                 </ul>
             </nav>
@@ -52,59 +56,45 @@
                     <li><a href="">EN <span id="toggle_lang">&#9662;</span></a></li>
                 </ul>
             </div>
-            <div id="dropdownS">
-                <div class="box">
-                    <a href=""><h6><strong>AH</strong> S01</h6>
-                    <p>International Transport</p></a>
-                </div>
-                <div class="box">
-                    <a href=""><h6><strong>AH</strong> S01</h6>
-                    <p>International Transport</p></a>
-                </div>
-                <div class="box">
-                    <a href=""><h6><strong>AH</strong> S01</h6>
-                    <p>International Transport</p></a>
-                </div>
-                <div class="box">
-                    <a href=""><h6><strong>AH</strong> S01</h6>
-                    <p>International Transport</p></a>
-                </div>
-                <div class="box">
-                    <a href=""><h6><strong>AH</strong> S01</h6>
-                    <p>International Transport</p></a>
-                </div>
-            </div>
-            <div id="dropdownP">
-                <div class="box">
-                    <a href=""><h6><strong>AH</strong> S01</h6>
-                    <p>International Transport</p></a>
-                </div>
-                <div class="box">
-                    <a href=""><h6><strong>AH</strong> S01</h6>
-                    <p>International Transport</p></a>
-                </div>
-                <div class="box">
-                    <a href=""><h6><strong>AH</strong> S01</h6>
-                    <p>International Transport</p></a>
-                </div>
-                <div class="box">
-                    <a href=""><h6><strong>AH</strong> S01</h6>
-                    <p>International Transport</p></a>
-                </div>
-                <div class="box">
-                    <a href=""><h6><strong>AH</strong> S01</h6>
-                    <p>International Transport</p></a>
-                </div>
-            </div>
+    
 
         </div>
+
     </header>
+    </div>
+    
 
+        <div id="products">
+            <ul>
+                <li>
+                    <a href=""><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+                <li>
+                    <a href=""><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+                <li>
+                    <a href=""><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+                <li>
+                    <a href=""><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+                <li>
+                    <a href=""><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+            </ul>
+        </div>
+    
 
-
+    <div id="c_wrap"><!-- If about then class of bg-white -->
     <section id="content-primary" class="content-primary">
       {{ content }}
     </section>
+    </div>
 
     <footer id="footer-primary" class="footer-primary">
         <div id="footer1"><div id="plane"></div></div>
@@ -173,12 +163,34 @@
     {% include google-analytics.html %}
 <script>
 $(document).ready(function () {
-  
-  var planes = ['p1', 'p2', 'p3', 'p4', 'p5'];
-  var funk = Math.floor(Math.random() * planes.length);
-  $('#plane').removeClass().addClass(planes[funk]);
+    var planes = ['p1', 'p2', 'p3', 'p4', 'p5'];
+    var funk = Math.floor(Math.random() * planes.length);
+    $('#plane').removeClass().addClass(planes[funk]);
+});
 
+</script>
+<script>
+$(document).ready(function() {
+                  
+$('li.products, li.services').on('mouseenter', function(){
+  var link = this.getAttribute('class');
+  $('#products, #services').removeClass();
+  $('#'+link).addClass('active');
+  closeMenus(1500);
+});
+
+closeMenus(1500);
+
+function closeMenus(delay){
+  $('#products, #services').off().on('mouseleave', function(){
+    setTimeout(function(){
+       $('#products, #services').removeClass();
+    }, delay);
+    console.log('fired');
+  });
+}
 });
 </script>
-  </body>
+
+</body>
 </html>

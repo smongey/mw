@@ -22,22 +22,42 @@
  * ---------------------------------------------------------------------------
  */
 
-
+#h_wrap {
+	background-color: white;
+}
 #header-primary {
 	@include outer-container;
 	background-color: white;
 	@include pad(60px 0% 4% 0%);
-
+	
 	#logo {
 		@include span-columns(5);
-		font-size: $base-font-size * 1.5; 
+		font-size: $base-font-size * 1.5;
+		position: relative;
+		z-index: 9999;
 
-		div#mark {
-			@include span-columns(1 of 5);
+		img {
+			width:45%;
+			margin-left: 7.5%;
+			margin-top: -10px;
 		}
+	/*	div#mark {
+			@include span-columns(1 of 5);
+			margin-right: 0;
+			margin-left: 5%;
+			margin-top: -13px;
+			img {
+				width: 86%;
+				margin-left: 8%;
+				margin-right: 6%;
+			}
+		}
+
 		div#wordmark {
 			@include span-columns(4 of 5);
+			font-size: 22px;
 		}
+	*/
 	}
 
 	div#nav-wrap {
@@ -47,7 +67,9 @@
 			@include row;
 			@include span-columns(9);
 			@include nav-ul;
-			height: 200px;
+			height: 100px;
+			position: relative;
+			z-index: 9999;
 
 			li {
 				@include horizontal-li;
@@ -60,6 +82,8 @@
 			text-align: center;
 			font-size: 14px;
 			@include link-blue;
+			position: relative;
+			z-index: 9999;
 
 			li {
 				@include horizontal-li;
@@ -70,43 +94,65 @@
 				}
 			}
 		}
-
-		#dropdownS {
-			position: absolute;
-			@include row;
-			@include pad(80px 2% 4% 0);
-			display: none;
-
-			.box {
-				@include span-columns(2);
-				width: 16%;
-				@include omega(5n);
-				background-color: $black;
-				@include pad(10px 2% 4% 10px);
-				@include link-blue;
-			}
-		}
-
-		#dropdownP {
-			position: absolute;
-			@include row;
-			@include pad(80px 2% 4% 0);
-			display: none;
-
-			.box {
-				@include span-columns(2);
-				width: 16%;
-				@include omega(5n);
-				background-color: $blue;
-				@include pad(10px 2% 4% 10px);
-				@include link-black;
-			}
-		}
 	}
 }
 
 
-.content-primary {}
+
+#products { 
+	width: 100%;
+	display: block; 
+	position:absolute; 
+	top:0px; 
+	background: white; 
+
+	z-index: 8888; 
+	height:230px; 
+	margin-top:-235px; 
+	transition: all cubic-bezier(.57,.22,.37,1) 0.3s; 
+	padding-top:50px; 
+		
+	  &.active { 
+	    margin-top: 85px;
+	    z-index: 9000;
+	  }
+	 
+	 ul {
+		margin-left:43.5%;
+		width: 50%;
+	 }
+
+	 li { 
+	 	display:inline-block; 
+	 	background:white; 
+	 	width: 16%;
+		@include omega(5n);
+		margin-right:2%;
+		background-color: $blue;
+		@include pad(10px 2% 4% 10px);
+		@include link-black;
+	 }
+}
+#services { display: none; position:absolute; top:0px; width:100%; background: lighten(aqua, 15%); z-index: 8888; height:200px; margin-top:-205px; transition: all cubic-bezier(.57,.22,.37,1) 0.3s; padding-top:50px; text-align:center;
+  &.active { 
+    margin-top: 0px;
+    z-index: 9000;
+  }
+  
+  li { display:inline-block; background:white; margin:25px; width:50px; height:50px; }
+}
+
+
+
+
+	
+
+
+.content-primary {
+	img {
+		min-width:100%
+	}
+}
 
 
 /* - Footer -------------------------------------------------------------------------- */
@@ -164,14 +210,16 @@
 		#c1 {
 			@include span-columns(8);
 		}
+
 		#c2 {
 			@include span-columns(4);
 			margin-top: -10px;
+			
 			.icon-acc {
-			font-size: 24px;
+				font-size: 24px;
+			}
 		}
 
-		}
 		.c3 {
 			@include span-columns(4);
 			@include pad(5% 0% 0% 0%);
