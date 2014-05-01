@@ -2,3 +2,58 @@
 <script src="/_bower_components/jquery/jquery.js"></script>
 <script src="/assets/js/app.js"></script>
 <!-- endbuild -->
+
+
+<script>
+/// Random Planes ///
+
+$(document).ready(function () {
+    var planes = ['p1', 'p2', 'p3', 'p4', 'p5'];
+    var funk = Math.floor(Math.random() * planes.length);
+    $('#plane').removeClass().addClass(planes[funk]);
+});
+
+
+/// Menu ///
+
+$(document).ready(function() {
+                  
+$('li.products, li.services').on('mouseenter', function(){
+  var link = this.getAttribute('class');
+  $('#products, #services').removeClass();
+  $('#'+link).addClass('active');
+  closeMenus(1500);
+});
+
+closeMenus(1500);
+
+function closeMenus(delay){
+  $('#products, #services').off().on('mouseleave', function(){
+    setTimeout(function(){
+       $('#products, #services').removeClass();
+    }, delay);
+    console.log('fired');
+  });
+}
+});
+
+
+/// Slider ///
+
+$('#fader img:gt(0)').hide();
+
+setInterval(function(){
+  $('#fader img:first-child')
+  .fadeOut('fast', function(){
+    $('#fader :first-child')
+    .next('img')
+    .fadeIn('fast')
+    .end()
+    .appendTo('#fader');
+  });
+}, 4000);
+
+
+</script>
+
+

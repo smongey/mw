@@ -11,13 +11,11 @@
 
     {% include styles.html %}
 
-    <script src="/_bower_components/jquery/jquery.min.js"></script>
 
 
     <!-- build:js({app,.tmp}) /assets/js/modernizr.js -->
     <script src="/_bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
 
         
@@ -65,7 +63,9 @@
     
 
         <div id="products">
-            <ul>
+            <div class="sp_wrap">
+                
+           <ul>
                 <li>
                     <a href=""><h6><strong>AH</strong> S01</h6>
                     <p>International Transport</p></a>
@@ -87,8 +87,39 @@
                     <p>International Transport</p></a>
                 </li>
             </ul>
+
+            </div>
         </div>
     
+    <div id="services">
+        <div class="sp_wrap">
+                
+           <ul>
+                <li>
+                    <a href=""><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+                <li>
+                    <a href=""><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+                <li>
+                    <a href=""><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+                <li>
+                    <a href=""><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+                <li>
+                    <a href=""><h6><strong>AH</strong> S01</h6>
+                    <p>International Transport</p></a>
+                </li>
+            </ul>
+
+            </div>
+        </div>
+
 
     <div id="c_wrap"><!-- If about then class of bg-white -->
     <section id="content-primary" class="content-primary">
@@ -161,36 +192,7 @@
 
     {% include scripts.html %}
     {% include google-analytics.html %}
-<script>
-$(document).ready(function () {
-    var planes = ['p1', 'p2', 'p3', 'p4', 'p5'];
-    var funk = Math.floor(Math.random() * planes.length);
-    $('#plane').removeClass().addClass(planes[funk]);
-});
 
-</script>
-<script>
-$(document).ready(function() {
-                  
-$('li.products, li.services').on('mouseenter', function(){
-  var link = this.getAttribute('class');
-  $('#products, #services').removeClass();
-  $('#'+link).addClass('active');
-  closeMenus(1500);
-});
-
-closeMenus(1500);
-
-function closeMenus(delay){
-  $('#products, #services').off().on('mouseleave', function(){
-    setTimeout(function(){
-       $('#products, #services').removeClass();
-    }, delay);
-    console.log('fired');
-  });
-}
-});
-</script>
 
 </body>
 </html>
