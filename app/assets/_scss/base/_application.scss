@@ -28,7 +28,7 @@
 #header-primary {
 	@include outer-container;
 	background-color: white;
-	@include pad(60px 0% 4% 0%);
+	@include pad(60px 0 4% 0);
 	
 	#logo {
 		@include span-columns(5);
@@ -103,7 +103,7 @@
 	width: 100%;
 	display: block; 
 	position:absolute; 
-	top:0px; 
+	top:0; 
 	background: white; 
 
 	z-index: 8888; 
@@ -141,7 +141,7 @@
 	width: 100%;
 	display: block; 
 	position:absolute; 
-	top:0px; 
+	top:0; 
 	background: white; 
 
 	z-index: 8888; 
@@ -194,7 +194,7 @@
 
 .footer-primary {
 	@include outer-container;
-	@include pad(3% 0% 4% 0%);
+	@include pad(3% 0 4% 0);
 	color: $green;
 
 	#name {
@@ -204,7 +204,7 @@
 
 	#footer1 {
 		@include span-columns(1);
-		margin-right:0%;
+		margin-right:0;
 		width:8.5%;
 		#plane {
 			width: 70%;
@@ -213,11 +213,11 @@
 			height:100px;
 			margin-top: -20px;
 		}
-		.p1 { background-image:url('../assets/img/planes/p1.png');background-size:contain;background-repeat: no-repeat;background-position: right top;}
-		.p2 { background-image:url('../assets/img/planes/p2.png');background-size:contain;background-repeat: no-repeat;background-position: right top;}
-		.p3 { background-image:url('../assets/img/planes/p3.png');background-size:contain;background-repeat: no-repeat;background-position: right top;}
-		.p4 { background-image:url('../assets/img/planes/p4.png');background-size:contain;background-repeat: no-repeat;background-position: right top;}
-		.p5 { background-image:url('../assets/img/planes/p5.png');background-size:contain;background-repeat: no-repeat;background-position: right top;}
+		.p1 { background-image:url('/assets/img/planes/p1.png');background-size:contain;background-repeat: no-repeat;background-position: right top;}
+		.p2 { background-image:url('/assets/img/planes/p2.png');background-size:contain;background-repeat: no-repeat;background-position: right top;}
+		.p3 { background-image:url('/assets/img/planes/p3.png');background-size:contain;background-repeat: no-repeat;background-position: right top;}
+		.p4 { background-image:url('/assets/img/planes/p4.png');background-size:contain;background-repeat: no-repeat;background-position: right top;}
+		.p5 { background-image:url('/assets/img/planes/p5.png');background-size:contain;background-repeat: no-repeat;background-position: right top;}
 
 	}
 
@@ -257,7 +257,7 @@
 
 		.c3 {
 			@include span-columns(4);
-			@include pad(5% 0% 0% 0%);
+			@include pad(5% 0 0 0);
 		}
 	}
 }

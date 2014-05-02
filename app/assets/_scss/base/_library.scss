@@ -9,7 +9,7 @@ section {
 
 
 section#h1{
-	@include pad(3% 0% 4% 0%);
+	@include pad(3% 0 4% 0);
 	background-color: white;
 
 	div#slider {
@@ -22,29 +22,48 @@ section#h1{
 
 
 section#h2{
-	@include pad(3% 0% 7% 0%);
+	@include pad(3% 0 7% 0);
 	background-color: white;
 
 	div#clocks {
 		
-		@include span-columns(4);
+		@include span-columns(3);
 		@include shift(1);
 		color: $blue;
+		
+		ul {
+			@include row;
+		}
 
 		li {
-			@include horizontal-li;
-			text-align:center;
+
+			@include span-columns(4 of 12);
+			@include omega(3n);
+			height:110px;
+			@include clock;
 		}
+
+		p {
+			width: 100%;
+			text-align: center;
+			margin-top: 95px;
+			margin-left: -2%;
+		}
+
+		
+
+
 	}
 
 	div#intro_text {
 		@include span-columns(6);
+		@include shift(1);
 	}
 }
 
 
 section#h3{
-	@include pad(6% 0% 4% 0%);
+	@include pad(6% 0 4% 0);
 
 	div.wrap {
 		@include shift(1);
@@ -104,7 +123,7 @@ section#h3{
 
 section#h4{
 
-	@include pad(3% 0% 4% 0%);
+	@include pad(3% 0 4% 0);
 	div.wrap {
 		@include shift(1);
 		@include span-columns(10);
@@ -134,7 +153,7 @@ section#h4{
 /* ------------------------------------------------------ About -- */
 
 section#a1 {
-	@include pad(3% 0% 4% 0%);
+	@include pad(3% 0 4% 0);
 	background-color: white;
 
 	div#about_text {
@@ -146,7 +165,7 @@ section#a1 {
 
 
 section#a2 {
-	@include pad(3% 0% 4% 0%);
+	@include pad(3% 0 4% 0);
 	background-color: white;
 	
 	div#people {
@@ -160,7 +179,7 @@ section#a2 {
 		  color: white;
 		  margin-bottom: 30px;
 		  p {
-		  	@include pad(3% 0% 3% 6%);
+		  	@include pad(3% 0 3% 6%);
 		  }
 		  @include link-white;
 		}
@@ -172,7 +191,7 @@ section#a2 {
 /* ------------------------------------------------------ Products -- */
 
 section#p1 {
-	@include pad(130px 0% 4% 0%);
+	@include pad(130px 0 4% 0);
 	
 	div#product1 {
 		@include span-columns(7);
@@ -201,14 +220,14 @@ section#p1 {
 		height: 320px;
 
 		h2 {
-			@include pad(15% 0% 30% 0%);
+			@include pad(15% 0 30% 0);
 		}
 	}
 }
 
 
 section#p2 {
-	@include pad(0% 0% 5% 0%);
+	@include pad(0 0 5% 0);
 	position: relative;
 	z-index: 2;
 
@@ -226,7 +245,7 @@ section#p2 {
 		@include omega;
 
 		.p_block{
-			@include pad(3% 5% 4% 0%);
+			@include pad(3% 5% 4% 0);
 			border-right: 1px dotted $blue;
 			
 			.secondary {
@@ -248,7 +267,7 @@ section#p2 {
 /* ------------------------------------------------------ Services -- */
 
 section#s1 {
-	@include pad(130px 0% 4% 0%);
+	@include pad(130px 0 4% 0);
 
 	div#service1 {
 		@include span-columns(7);
@@ -265,14 +284,14 @@ section#s1 {
 		height: 320px;
 
 		h2 {
-			@include pad(15% 0% 30% 0%);
+			@include pad(15% 0 30% 0);
 		}
 	}
 }
 
 
 section#s2{
-	@include pad(0% 0% 0% 0%);
+	@include pad(0 0 0 0);
 	
 
 	div.wrap{
@@ -288,7 +307,7 @@ section#s2{
 		@include omega;
 
 		.sd_block{
-			@include pad(3% 5% 4% 0%);
+			@include pad(3% 5% 4% 0);
 			border-right: 1px dotted $blue;
 
 			.secondary {
@@ -334,7 +353,7 @@ section#s3 {
 
 
 section#s4 {
-	@include pad(0% 0% 3% 0%);
+	@include pad(0 0 3% 0);
 
 	div#services_pricing {
 		background-color: white;
@@ -344,7 +363,7 @@ section#s4 {
 
 		#s_tabs_head {
 			@include span-columns(6 of 8);
-			@include pad(0 0 15px 0%);
+			@include pad(0 0 15px 0);
 			border-bottom: 1px solid $light-gray;
 			
 			.s_head li {
@@ -360,7 +379,7 @@ section#s4 {
 
 		#s_tabs_content {
 			@include span-columns(6 of 8);
-			@include pad(3% 0% 3% 0%);
+			@include pad(3% 0 3% 0);
 
 			#destination {
 				@include span-columns(4 of 6);
@@ -400,7 +419,7 @@ section#s4 {
 }
 
 .n_wrap {
-	@include pad(3% 0% 4% 0%);
+	@include pad(3% 0 4% 0);
 	@include span-columns(8);
 	@include shift(4);
 
@@ -435,7 +454,7 @@ section#s4 {
 			p {
 				margin-bottom: 10%;
 				&:last-child {
-					margin-bottom: 00%;
+					margin-bottom: 0;
 				}
 			}
 

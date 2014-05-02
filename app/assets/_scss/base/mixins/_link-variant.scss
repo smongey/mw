@@ -100,7 +100,7 @@
     &:hover,
     &:active {
       color: $blue;
-      border-bottom: 0px solid $blue;
+      border-bottom: 0 solid $blue;
     }
   }
 }
@@ -118,7 +118,7 @@
     &:hover,
     &:active {
       color: $dark-gray;
-      border-bottom: 0px solid $dark-gray;
+      border-bottom: 0 solid $dark-gray;
     }
   }
 }
