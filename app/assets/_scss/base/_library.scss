@@ -361,35 +361,32 @@ section#s4 {
 		@include shift(2);
 		@include pad(30px 1% 30px 3%);
 
-		#s_tabs_head {
+		.tabs {
 			@include span-columns(6 of 8);
 			@include pad(0 0 15px 0);
 			border-bottom: 1px solid $light-gray;
 			
-			.s_head li {
+			li {
 				@include horizontal-li;
 				font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px;
 				@include link-gray;
 
-				a:active {
-					font-weight: bold;
-				}
 			}
 		}
 
-		#s_tabs_content {
+		#tab1, #tab2, #tab3 {
 			@include span-columns(6 of 8);
 			@include pad(3% 0 3% 0);
 
-			#destination {
+			.destination {
 				@include span-columns(4 of 6);
 			}
 
-			#small {
+			.small {
 				@include span-columns(1 of 6);
 			}
 
-			#large {
+			.large {
 				@include span-columns(1 of 6);
 			}
 
@@ -410,7 +407,7 @@ section#s4 {
 /* ------------------------------------------------------ News -- */
 
 #stage {
-	margin-top:-11%;	
+	margin-top:-50px;	
 }
 
 .n_title {

@@ -99,7 +99,8 @@
 
 
 
-#products { 
+
+#services, #products {
 	width: 100%;
 	display: block; 
 	position:absolute; 
@@ -111,74 +112,46 @@
 	margin-top:-235px; 
 	transition: all cubic-bezier(.57,.22,.37,1) 0.3s; 
 	padding-top:50px; 
-	
+
 	.sp_wrap {
 		@include span-columns(7);
 		@include shift(5);
 	}	
-	  &.active { 
-	    margin-top: 85px;
-	    z-index: 9000;
-	  }
-	 
-	 ul {
-	 }
 
-	 li { 
-	 	display:inline-block; 
+	&.active { 
+		margin-top: 85px;
+		z-index: 9000;
+	}
+
+	li {
+		display:inline-block; 
 	 	background:white; 
 	 	width: 130px;
 	 	height: 130px;
 		@include omega(5n);
 		margin-right:2%;
-		background-color: $blue;
 		@include pad(10px 2% 4% 10px);
-		@include link-black;
-	 }
+	}
 }
 
 #services { 
-	width: 100%;
-	display: block; 
-	position:absolute; 
-	top:0; 
-	background: white; 
-
-	z-index: 8888; 
-	height:230px; 
-	margin-top:-235px; 
-	transition: all cubic-bezier(.57,.22,.37,1) 0.3s; 
-	padding-top:50px; 
-	
-	.sp_wrap {
-		@include outer-container;
-		@include span-columns(7);
-		@include shift(5);
-	}	
-
-	  &.active { 
-	    margin-top: 85px;
-	    z-index: 9000;
-	  }
-	 
-	 ul {
-	 }
-
-	 li { 
-	 	display:inline-block; 
-	 	background:white; 
-	 	width: 130px;
-	 	height: 130px;
-		@include omega(5n);
-		margin-right:2%;
+	li { 
 		background-color: $black;
-		@include pad(10px 2% 4% 10px);
 		@include link-blue;
-
-	 }
+	}
 }
 
 
+#products { 
+	ul {
+		margin-left: 30%;
+	}
+
+	li { 
+		background-color: $blue;
+		@include link-black;
+	}
+}
 
 	
 
