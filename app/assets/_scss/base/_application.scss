@@ -112,6 +112,7 @@
 	transition: all cubic-bezier(.57,.22,.37,1) 0.3s; 
 	padding-top:50px; 
 
+
 	.sp_wrap {
 		@include span-columns(7);
 		@include shift(5);
