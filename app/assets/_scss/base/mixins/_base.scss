@@ -190,7 +190,6 @@
 		  margin: 0; 
 		  margin-top: 5px !important;
 		  padding: 0; 
-		  padding-left: 5px;
 		  list-style: none; 
 		  position: relative; 
 		  width: 100px; 
@@ -203,7 +202,7 @@
 		  transition: all 0.3s ease-in; 
 		  /*-moz-transform:scale(0); */ 
 		  color: $blue;
-		  background: $black; 
+		  background: none; 
 		  cursor: pointer; 
 		  user-select: none; 
 		  -moz-user-select:none; 
@@ -212,7 +211,7 @@
 		}
 
 		ul.menu li { 
-		  padding-left: 3px;
+		  padding-left: 0;
 		  -webkit-transition: all 0.3s ease-in; 
 		  -moz-transition: all 0.3s ease-in; 
 		  -o-transition: all 0.3s ease-in; 
@@ -222,7 +221,7 @@
 
 		ul.menu li:hover { 
 		  padding-left: 10px; 
-		  color: white;
+		  color: $dark-gray;
 		}
 
 		.menu.showMenu { 

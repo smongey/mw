@@ -22,7 +22,7 @@
  * ---------------------------------------------------------------------------
  */
 
-#h_wrap {
+.w_wrap {
 	background-color: white;
 }
 #header-primary {
@@ -167,7 +167,7 @@
 
 .footer-primary {
 	@include outer-container;
-	@include pad(3% 0 4% 0);
+	@include pad(6% 0 4% 0);
 	color: $green;
 
 	#name {
@@ -205,7 +205,15 @@
 
 	#footer3 {
 		@include span-columns(7);
-		color: $blue;
+		color: $blue; 
+		.icon {
+			float: left;
+			margin-top: 8px;
+		}
+		.acc{
+			float:left;
+			margin-top: 10px;
+		}
 	}
 
 	.contact {
@@ -236,6 +244,6 @@
 }
 
 
-			@include language;
+@include language;
 
 
