@@ -448,6 +448,7 @@ section#s4 {
 .n_title {
 	@include span-columns(7);
 	@include shift(5);
+	@include link-blue;
 }
 
 .n_wrap {
@@ -471,7 +472,7 @@ section#s4 {
 		
 		.perma {
 			position: absolute;
-			left: 35.5%;
+			margin-left:-95px;
 			font-size: 50px;
 			@include link-blue;
 		}
