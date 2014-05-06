@@ -84,17 +84,132 @@
 	    top: 1px;
 	    left: 28px;
 	}
+
+	.t1 {
+		width: 4px;
+	    height: 8px;
+	    background: #222;
+	    position: absolute;
+	    top: 5px;
+	    left: 39px;
+		/* Safari */
+		-webkit-transform: rotate(30deg);
+		/* Firefox */
+		-moz-transform: rotate(30deg);
+		/* IE */
+		-ms-transform: rotate(30deg);
+		/* Opera */
+		-o-transform: rotate(30deg);
+		/* Internet Explorer */
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);  
+	}
+
+	.t2 {
+		width: 4px;
+	    height: 8px;
+	    background: #222;
+	    position: absolute;
+	    top: 14px;
+	    left: 48px;
+		/* Safari */
+		-webkit-transform: rotate(60deg);
+		/* Firefox */
+		-moz-transform: rotate(60deg);
+		/* IE */
+		-ms-transform: rotate(60deg);
+		/* Opera */
+		-o-transform: rotate(60deg);
+		/* Internet Explorer */
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);  
+	}
+
 	.t3 {
 	    height: 4px;
 	    width: 8px;
 	    top: 28px;
-	    left: 49px;
+	    left: 50px;
 	}
+
+	.t4 {
+		width: 4px;
+	    height: 8px;
+	    background: #222;
+	    position: absolute;
+	    top: 39px;
+	    left: 48px;
+		/* Safari */
+		-webkit-transform: rotate(120deg);
+		/* Firefox */
+		-moz-transform: rotate(120deg);
+		/* IE */
+		-ms-transform: rotate(120deg);
+		/* Opera */
+		-o-transform: rotate(120deg);
+		/* Internet Explorer */
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);  
+	}
+	.t5 {
+		width: 4px;
+	    height: 8px;
+	    background: #222;
+	    position: absolute;
+	    top: 47px;
+	    left: 39px;
+		/* Safari */
+		-webkit-transform: rotate(150deg);
+		/* Firefox */
+		-moz-transform: rotate(150deg);
+		/* IE */
+		-ms-transform: rotate(150deg);
+		/* Opera */
+		-o-transform: rotate(150deg);
+		/* Internet Explorer */
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);   
+	}
+
 	.t6 {
 	    width: 4px;
 	    height: 8px;
 	    bottom: 1px;
 	    left: 28px;
+	}
+
+	.t7 {
+		width: 4px;
+	    height: 8px;
+	    background: #222;
+	    position: absolute;
+	    top: 47px;
+	    left: 17px;
+		/* Safari */
+		-webkit-transform: rotate(-150deg);
+		/* Firefox */
+		-moz-transform: rotate(-150deg);
+		/* IE */
+		-ms-transform: rotate(-150deg);
+		/* Opera */
+		-o-transform: rotate(150deg);
+		/* Internet Explorer */
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); 
+	}
+
+	.t8 {
+		width: 4px;
+	    height: 8px;
+	    background: #222;
+	    position: absolute;
+	    top: 39px;
+	    left: 8px;
+		/* Safari */
+		-webkit-transform: rotate(-120deg);
+		/* Firefox */
+		-moz-transform: rotate(-120deg);
+		/* IE */
+		-ms-transform: rotate(-120deg);
+		/* Opera */
+		-o-transform: rotate(-120deg);
+		/* Internet Explorer */
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);  
 	}
 	.t9 {
 	    height: 4px;
@@ -102,6 +217,45 @@
 	    top: 28px;
 	    left: 1px;
 	}
+
+	.t10 {
+		width: 4px;
+	    height: 8px;
+	    background: #222;
+	    position: absolute;
+	    top: 14px;
+	    left: 7px;
+		/* Safari */
+		-webkit-transform: rotate(-60deg);
+		/* Firefox */
+		-moz-transform: rotate(-60deg);
+		/* IE */
+		-ms-transform: rotate(-60deg);
+		/* Opera */
+		-o-transform: rotate(-60deg);
+		/* Internet Explorer */
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); 
+	}
+
+	.t11 {
+		width: 4px;
+	    height: 8px;
+	    background: #222;
+	    position: absolute;
+	    top: 5px;
+	    left: 17px;
+		/* Safari */
+		-webkit-transform: rotate(-30deg);
+		/* Firefox */
+		-moz-transform: rotate(-30deg);
+		/* IE */
+		-ms-transform: rotate(-30deg);
+		/* Opera */
+		-o-transform: rotate(-30deg);
+		/* Internet Explorer */
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);  
+	}
+
 	.pin {
 	    width: 6px;
 	    height: 6px;
