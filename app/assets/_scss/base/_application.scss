@@ -105,7 +105,7 @@
 	position:absolute; 
 	top:0; 
 	background: white; 
-
+	min-width: 1280px; 
 	z-index: 8888; 
 	height:230px; 
 	margin-top:-235px; 
@@ -114,6 +114,7 @@
 
 
 	.sp_wrap {
+		@include outer-container;
 		@include span-columns(7);
 		@include shift(5);
 	}	
@@ -135,6 +136,9 @@
 }
 
 #services { 
+	ul {
+		margin-left: 1.5%;
+	}
 	li { 
 		background-color: $black;
 		@include link-blue;

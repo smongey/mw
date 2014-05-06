@@ -362,7 +362,12 @@ section#s3 {
 		width:40%;
 		@include copy;
 		color:white;
-		@include pad(30px 2% 30px 5%);
+		@include link-white;
+		@include pad(30px 2% 20px 5%);
+
+		.secondary {
+			padding-top: 85%;
+		}
 
 	}
 
