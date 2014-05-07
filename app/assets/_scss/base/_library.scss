@@ -72,32 +72,27 @@ section#h3{
 	div.wrap {
 		@include shift(1);
 		@include span-columns(10);
-		background-color: $lightest-gray;
+		background: white;
 	}
 	
+	a {
+		div.h_services {
+			background: white;
+		}
 
-	div#services1 {
-		@include span-columns(2);
-		width:23.33333%;
-		margin: 0;
-		background-color: $lightest-gray;
-		height: 100%;
+		&:hover {
+			div.h_services {background: $light-gray;}
+			.s_text {
+				color: $dark-gray;
+			}
+		}
 	}
 
-	div#services2 {
+	div.h_services {
 		@include span-columns(2);
 		width:23.33333%;
 		margin: 0;
-		background-color: $lightest-gray;
 		height: 100%;
-	}
-
-	div#services3 {
-		@include span-columns(2);
-		width:23.33333%;
-		margin: 0;
-		background-color: $lightest-gray;
-		@include link-blue-ul;
 	}
 
 	
@@ -106,9 +101,14 @@ section#h3{
 		@include pad(3% 4% 4% 7%);
 		color: $blue;
 		@include link-blue-ul;
+		min-height: 180px;
 
 		h6 {
 			color: $dark-gray;
+		}
+
+		.secondary {
+			padding-top: 10px;
 		}
 	}
 
@@ -116,7 +116,6 @@ section#h3{
 		@include span-columns(4);
 		background-color: white;
 		width:30%;
-		min-height: 420px;
 		h3 {
 			color: $green;
 			@include pad(10% 10% 20% 10%);

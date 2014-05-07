@@ -111,6 +111,7 @@
 	margin-top:-235px; 
 	transition: all cubic-bezier(.57,.22,.37,1) 0.3s; 
 	padding-top:50px; 
+	opacity: 0;
 	
 	p {
 		margin-top: 15px;
@@ -126,7 +127,15 @@
 	&.active { 
 		margin-top: 85px;
 		z-index: 9000;
+		opacity: 1;
 	}
+
+	&#hold {
+		margin-top: 85px;
+		z-index: 9000;
+		opacity: 1;
+	}
+
 
 	li {
 		display:inline-block; 
