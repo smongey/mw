@@ -268,4 +268,41 @@
 
 @include language;
 
+#lean_overlay {
+    position: fixed;
+    z-index:9950;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: $medium-gray;
+    display: none;
+}
+
+#modal {
+	margin-top:2%;
+	background: white;
+	color: $dark-gray;
+	@include pad(3% 4% 2% 4%);
+	@include copy;
+	@include outer-container;
+	@include span-columns(8);
+	@include shift(2);
+
+	.lead {
+		padding-bottom:50px;
+	}
+
+	.logos {
+		padding-top:60px;
+
+		li {
+			img {
+				height:90px;
+			}
+			@include horizontal-li;
+			margin-right: 3%;
+		}
+	}
+}
 

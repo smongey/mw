@@ -31,6 +31,10 @@ function closeMenus(delay){
 
 
 /// Slider ///
+$("#launch").leanModal();
+
+
+/// Slider ///
 
 /// $('#fader img:gt(0)').hide();
 
