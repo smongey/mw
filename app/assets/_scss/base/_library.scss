@@ -22,11 +22,11 @@ section#h1{
 
 
 section#h2{
-	@include pad(3% 0 7% 0);
+	@include pad(0 0 4% 0);
 	background-color: white;
 
 	div#clocks {
-		
+		padding-top: 2.5%;
 		@include span-columns(3);
 		@include shift(1);
 		color: $blue;
@@ -36,23 +36,23 @@ section#h2{
 		}
 
 		li {
-
 			@include span-columns(4 of 12);
 			@include omega(3n);
 			height:110px;
 			@include clock;
+
+
 		}
 
 		p {
-			width: 100%;
+			width: 90%;
 			text-align: center;
-			margin-top: 75px;
-			margin-left: -4%;
+			font-size: 14px;
+			margin-top: 37px;
+			position:relative;
+			margin-left: auto;
+			margin-right: auto;
 		}
-
-		
-
-
 	}
 
 	div#intro_text {
@@ -67,12 +67,12 @@ section#h2{
 
 
 section#h3{
-	@include pad(6% 0 4% 0);
+	@include pad(4% 0 2% 0);
 
 	div.wrap {
 		@include shift(1);
 		@include span-columns(10);
-		background: white;
+		position:relative;
 	}
 	
 	a {
@@ -92,7 +92,8 @@ section#h3{
 		@include span-columns(2);
 		width:23.33333%;
 		margin: 0;
-		height: 100%;
+		min-height: 420px;
+
 	}
 
 	
@@ -101,7 +102,8 @@ section#h3{
 		@include pad(3% 4% 4% 7%);
 		color: $blue;
 		@include link-blue-ul;
-		min-height: 180px;
+		height: 100% !important;
+		
 
 		h6 {
 			color: $dark-gray;
@@ -116,6 +118,10 @@ section#h3{
 		@include span-columns(4);
 		background-color: white;
 		width:30%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
 		h3 {
 			color: $green;
 			@include pad(10% 10% 20% 10%);
@@ -126,7 +132,7 @@ section#h3{
 
 section#h4{
 
-	@include pad(3% 0 4% 0);
+	@include pad(2% 0 0 0);
 	div.wrap {
 		@include shift(1);
 		@include span-columns(10);
@@ -156,7 +162,7 @@ section#h4{
 /* ------------------------------------------------------ About -- */
 
 section#a1 {
-	@include pad(3% 0 4% 0);
+	@include pad(0 0 1% 0);
 	background-color: white;
 
 	div#about_text {
@@ -200,34 +206,43 @@ section#a2 {
 /* ------------------------------------------------------ Shared -- */
 
 section.spOne {
-	@include pad(130px 0 4% 0);
+	@include pad(130px 0 0% 0);
+	position:relative;
 
 	.sp1 {
 		@include span-columns(7);
 		@include shift(1);
 		@include omega;
-		height: 500px;
 		overflow: hidden;
 		z-index:0;
 
 		img {
 			width:100%;
-			height:auto;
+			min-height:auto;
+			margin-bottom: -10px;
 			position: relative;
-			margin: -50px auto 0 auto; 
 		}
 	}
 
 	.sp2 {
 		@include span-columns(3);
 		@include omega;
-		@include pad(2% 2% 2% 2%);
-		margin-top:190px;
-		height: 290px;
+		position: absolute;
 
-		h2 {
-			@include pad(15% 0 30% 0);
-		}		
+		bottom: 0;
+		left:65.8%;
+
+		.box {
+			@include pad(7% 7% 7% 7%);
+			bottom:0;
+			height: 290px;
+			
+			h2 {
+				@include pad(15% 0 30% 0);
+			}		
+		}
+
+		
 	}
 	
 	#service2, #product2 {
@@ -239,6 +254,8 @@ section.spOne {
 	#service2 {
 		background-color: $black;
 		color: $blue;
+					min-width: 290px;
+
 	}
 
 	#product2 {
@@ -253,7 +270,7 @@ section.spTwo {
 	z-index: 2;
 
 	div.wrap{
-		margin-top: -7.5%;
+		margin-top: -40px;
 		@include span-columns(8);
 		@include shift(2);
 		background-color: white;
@@ -387,7 +404,7 @@ section#s4 {
 }
 
 .n_wrap {
-	@include pad(3% 0 4% 0);
+	@include pad(3% 0 0 0);
 	@include span-columns(8);
 	@include shift(4);
 
@@ -430,8 +447,7 @@ section#s4 {
 				@include link-gray-ul;
 			}
 		}
-}
-
+	}
 }
 
 

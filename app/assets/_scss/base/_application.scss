@@ -35,6 +35,11 @@
 		font-size: $base-font-size * 1.5;
 		position: relative;
 		z-index: 9999;
+		h1 {
+			font-size: 10px;
+			position:absolute;
+			left:-9999px;
+		}
 
 		img {
 			width:45%;
@@ -107,7 +112,7 @@
 	background: white; 
 	min-width: 1290px; 
 	z-index: 8888; 
-	height:230px; 
+	height:220px; 
 	margin-top:-235px; 
 	transition: all cubic-bezier(.57,.22,.37,1) 0.3s; 
 	padding-top:50px; 

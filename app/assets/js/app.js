@@ -3,13 +3,12 @@ $(document).ready(function () {
 
 /// Random Planes ///
 
-    var planes = ['p1', 'p2', 'p3', 'p4', 'p5'];
-    var funk = Math.floor(Math.random() * planes.length);
-    $('#plane').removeClass().addClass(planes[funk]);
+  var planes = ['p1', 'p2', 'p3', 'p4', 'p5'];
+  var funk = Math.floor(Math.random() * planes.length);
+  $('#plane').removeClass().addClass(planes[funk]);
 
 
 /// Menu ///
-
 $('li.products, li.services').on('mouseenter', function(){
   var link = this.getAttribute('class');
   $('#products, #services').removeClass();
@@ -27,7 +26,8 @@ function closeMenus(delay){
     console.log('fired');
   });
 }
-});
+
+}); /// End of document.ready ///
 
 
 /// Slider ///
@@ -104,28 +104,28 @@ $('.tabs a').click(function(e){
 /// Language ///
 
 if ($('#language-selected').is(':empty')){
-  $( ".menu li" ).each(function() {
+  $('.menu li').each(function() {
     if($(this).attr('class') == 'selected'){
       var selected = $(this).find('.lang-code').html().toUpperCase();
         console.log($(this).find('.lang-code').html().toUpperCase());
-        $("#language-selected").html(selected);
+        $('#language-selected').html(selected);
     }
   });
 }
 
 // The next following line displays and set selected
-  $(".dropdownbox").click(function(){
-  $(".menu").toggleClass("showMenu");
-    $(".menu > li").click(function(){
+  $('.dropdownbox').click(function(){
+  $('.menu').toggleClass('showMenu');
+    $('.menu > li').click(function(){
       var selected = $(this).find('.lang-code').html().toUpperCase();
       console.log($(this).find('.lang-code').html().toUpperCase());
-      $("#language-selected").html(selected);
-      $(".menu").removeClass("showMenu");         
+      $('#language-selected').html(selected);
+      $('.menu').removeClass('showMenu');         
       });
   });
 
   // Close select box if nothing is selected
-  $("#dropdown-wrapper").mouseleave(function(){
-    $(".menu").removeClass("showMenu");
+  $('#dropdown-wrapper').mouseleave(function(){
+    $('.men').removeClass('showMenu');
   });
 
