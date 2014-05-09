@@ -422,13 +422,75 @@ section#s4 {
 			}
 		}
 		
-		.perma {
+		.plus {
 			position: absolute;
 			margin-left:-95px;
 			font-size: 50px;
+			z-index:50;
 			@include link-blue;
+			a {
+		    &:hover {
+		      color: white;
+		      -webkit-animation: rotates 1s;
+		    }
+		  }
 		}
 		
+
+		.plus-wrap {
+		  margin: auto;
+		  cursor:pointer;
+		  font-size: 26px !important; 
+		}
+
+
+		.plus-wrap #dropdown {
+		  width: 100px; 
+		  margin-top: 20px;
+		  z-index: 1000;
+		}
+
+
+		ul.p-menu{
+		  margin: 0; 
+		  padding: 0; 
+		  list-style: none; 
+		  position: absolute;
+		  margin-left: -85px;
+		  margin-top: 60px; 
+		  width: 100px; 
+		  overflow: hidden; 
+		  height: 0; 
+		  -webkit-transition: all 0.3s ease-in; 
+		  -moz-transition: all 0.3s ease-in; 
+		  -o-transition: all 0.3s ease-in; 
+		  transition: all 0.3s ease-in; 
+		  /*-moz-transform:scale(0); */ 
+		  cursor: pointer; 
+		  -moz-user-select:none; 
+		  /* Safari */ 
+		  -khtml-user-select: none; 
+		  height:100%;
+		  opacity:0;
+		}
+
+		ul.p-menu li { 
+		  -webkit-transition: all 0.3s ease-in; 
+		  -moz-transition: all 0.3s ease-in; 
+		  -o-transition: all 0.3s ease-in; 
+		  transition: all 0.3s ease-in; 
+		}
+
+		ul.p-menu li:hover { 
+		  color: $blue;
+		  /*background: #1F8EC1;*/
+		}
+
+		.p-menu.showPlus { 
+		  /*-moz-transform:scale(1);*/ 
+		  opacity:1;
+		}
+
 		.n_text {
 			@include pad(7% 9% 9% 9%);
 			background-color: white;

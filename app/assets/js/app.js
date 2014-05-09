@@ -105,6 +105,20 @@ $('.tabs a').click(function(e){
 })
 
 
+/// Plus ///
+
+$(".plus").click(function(){
+  $(".p-menu").toggleClass("showPlus");
+  //$(this).toggleClass("spin");
+  $(".plus").css({'-webkit-transform':'rotate(' + 90 + 'deg)',  '-moz-transform':'rotate(' + 90 + 'deg)', '-o-transform':'rotate(' + 90 + 'deg)', '-ms-transform':'rotate(' + 90 + 'deg)', 'transform':'rotate(' + 90  + 'deg)'});
+});
+
+
+$(".dropdown").mouseleave(function(){
+  $(".p-menu").removeClass("showPlus");
+});
+
+
 /// Language ///
 
 if ($('#language-selected').is(':empty')){

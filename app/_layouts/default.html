@@ -25,6 +25,28 @@
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+
+
+
+<div id="modal" style="display:none;">
+    <ul>
+        <li class="lead"><strong>Accreditation</strong></li>
+        <li>Department of Transport approved Regulated Air Cargo Agent</li>
+        <li>Member of the Irish International Frieght Association (IIFA)</li>
+        <li>Holder of National and International Haulage Licence</li>
+        <li>Haz cargo Trained Drivers</li>
+        <li>Current Tax Clearance Certificate</li>
+        
+        <ul class="logos">
+            <li><img src="/assets/img/acc/iata.png" alt="IATA" /></li>
+            <li><img src="/assets/img/acc/tuv.png" alt="TUV" /></li>
+            <li><img src="/assets/img/acc/icefat.png" alt="ICEFAT" /></li>
+            <li><img src="/assets/img/acc/ukrg.png" alt="UK Registrars Group" /></li>
+        </ul>
+    </ul>
+</div>
+
+
     <div class="w_wrap">
     <header id="header-primary" class="header-primary">
         <div id="logo">
@@ -36,8 +58,8 @@
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
-                    <li id="{% if page.title == "Services" %}hold{% endif %}" class="services"><a href="/services">Services</a></li>
-                    <li class="products"><a href="/products" id="#products">Products</a></li>
+                    <li class="services"><a href="/services">Services</a></li>
+                    <li class="products"><a href="/products">Products</a></li>
                     <li><a href="/news">News</a></li>
                 </ul>
             </nav>
@@ -77,10 +99,10 @@
     
 
  
-    
+<div class="menu-wrap">
+  
     <div id="services">
         <div class="sp_wrap">
-                
            <ul>
                 <li>
                     <a href=""><h6><strong>AH</strong> S01</h6>
@@ -103,13 +125,10 @@
                     <p>International Transport</p></a>
                 </li>
             </ul>
-
-            </div>
         </div>
-
-        <div id="products">
-            <div class="sp_wrap">
-                
+    </div>
+    <div id="products">
+        <div class="sp_wrap">
            <ul>
                 <li>
                     <a href=""><h6><strong>AH</strong> S01</h6>
@@ -120,9 +139,11 @@
                     <p>International Transport</p></a>
                 </li>
             </ul>
-
-            </div>
         </div>
+    </div>
+
+</div>
+
 
 
       {{ content }}
@@ -192,24 +213,6 @@
 
     {% include scripts.html %}
     {% include google-analytics.html %}
-
-<div id="modal" style="display:none;">
-    <ul>
-        <li class="lead"><strong>Accreditation</strong></li>
-        <li>Department of Transport approved Regulated Air Cargo Agent</li>
-        <li>Member of the Irish International Frieght Association (IIFA)</li>
-        <li>Holder of National and International Haulage Licence</li>
-        <li>Haz cargo Trained Drivers</li>
-        <li>Current Tax Clearance Certificate</li>
-        
-        <ul class="logos">
-            <li><img src="/assets/img/acc/iata.png" alt="IATA" /></li>
-            <li><img src="/assets/img/acc/tuv.png" alt="TUV" /></li>
-            <li><img src="/assets/img/acc/icefat.png" alt="ICEFAT" /></li>
-            <li><img src="/assets/img/acc/ukrg.png" alt="UK Registrars Group" /></li>
-        </ul>
-    </ul>
-</div>
 
 
 </body>
