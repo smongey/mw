@@ -309,31 +309,56 @@
 
 
 
-/* —————————————————————————————— */
-
-
-
-
-
-
-
-@media screen and (min-width: 1369px) {
-#services ul {
-		margin-left:10px;
-	}
-}
+/* ————————————— Hacky Menu Media Queries ————————————————— */
 
 
 @media screen and (max-width: 1095px) {
-#services li, #products li {
-		width: 100px;
-	 	height: 100px;
-	 	font-size:14px;
-	}
-.social-links{
-			  width: 75px;
+	#services li, #products li {
+			width: 100px;
+		 	height: 100px;
+		 	font-size:14px;
+		}
+	.social-links{
+				  width: 75px;
 
-}	
+	}	
 }
+
+@media screen and (max-width: 1100px) {
+#products ul {
+		margin-left:225px;
+	}
+}
+@media screen and (max-width: 1200px) {
+#products ul {
+		margin-left:235px;
+	}
+}
+@media screen and (min-width: 1300px) {
+#services ul {
+		margin-left:10px;
+	}
+#products ul {
+		margin-left:245px;
+	}
+
+}
+
+@media screen and (min-width: 1600px) {
+#products ul {
+		margin-left:295px;
+	}
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1800px) {
+#services ul {
+		margin-left:25px;
+	}
+#products ul {
+		margin-left:265px;
+	}
+
+}
+
 
 	 	

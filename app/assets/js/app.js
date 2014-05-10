@@ -31,7 +31,7 @@ function closeMenus(delay){
 
 
 /// Slider ///
-$("#launch").leanModal();
+$('#launch').leanModal();
 
 
 /// Slider ///
@@ -107,15 +107,15 @@ $('.tabs a').click(function(e){
 
 /// Plus ///
 
-$(".plus").click(function(){
-  $(".p-menu").toggleClass("showPlus");
+$('.plus').click(function(){
+  $('.p-menu').toggleClass('showPlus');
   //$(this).toggleClass("spin");
-  $(".plus").css({'-webkit-transform':'rotate(' + 90 + 'deg)',  '-moz-transform':'rotate(' + 90 + 'deg)', '-o-transform':'rotate(' + 90 + 'deg)', '-ms-transform':'rotate(' + 90 + 'deg)', 'transform':'rotate(' + 90  + 'deg)'});
+  $('.plus').css({'-webkit-transform':'rotate(' + 90 + 'deg)',  '-moz-transform':'rotate(' + 90 + 'deg)', '-o-transform':'rotate(' + 90 + 'deg)', '-ms-transform':'rotate(' + 90 + 'deg)', 'transform':'rotate(' + 90  + 'deg)'});
 });
 
 
-$(".dropdown").mouseleave(function(){
-  $(".p-menu").removeClass("showPlus");
+$('.dropdown').mouseleave(function(){
+  $('.p-menu').removeClass('showPlus');
 });
 
 
