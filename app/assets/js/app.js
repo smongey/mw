@@ -144,6 +144,6 @@ if ($('#language-selected').is(':empty')){
 
   // Close select box if nothing is selected
   $('#dropdown-wrapper').mouseleave(function(){
-    $('.men').removeClass('showMenu');
+    $('.menu').removeClass('showMenu');
   });
 

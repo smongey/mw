@@ -430,7 +430,7 @@ section#s4 {
 			@include link-blue;
 			a {
 		    &:hover {
-		      color: white;
+		      color: $dark-gray;
 		      -webkit-animation: rotates 1s;
 		    }
 		  }
