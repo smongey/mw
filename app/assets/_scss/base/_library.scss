@@ -15,8 +15,60 @@ section#h1{
 	div#slider {
 		@include span-columns(10);
 		@include shift(1);
-		background-color: $lightest-gray;
 		height: 500px;
+		
+		.wrap {
+			width:100%;
+			height:100%;
+			position:relative;
+
+			.item1, .item2  {
+				width:250px;
+				height:250px;
+				position:absolute;
+				z-index:10;
+				@include pad(1% 2% 1% 1%);
+				bottom:0;
+				
+				h2 {
+					@include pad(15% 0 30% 0);
+					font-size:10px ; 
+				}		
+			}
+			
+			.item1 {
+				background:$green;
+				left:8%;
+				top:12%;
+			}
+
+			.item2 {
+				background:$dark-gray  ;
+				right:8%;
+				bottom:15%;
+			}
+
+			.image1, .image2 {
+				width:270px;
+				height:270px;
+				position:absolute;
+				background:white;
+				
+			}
+
+			.image1 {
+				border:1px solid #f3f3f3;
+				bottom:3%;
+				left:23%;
+			}
+			.image2 {
+				border:1px solid #f3f3f3;
+				top:3%;
+				right:23%;
+			}
+		}
+
+
 	}
 }
 
@@ -211,7 +263,7 @@ section#a2 {
 /* ------------------------------------------------------ Shared -- */
 
 section.spOne {
-	@include pad(130px 0 0% 0);
+	@include pad(180px 0 0% 0);
 	position:relative;
 
 	.sp1 {
@@ -259,13 +311,14 @@ section.spOne {
 	#service2 {
 		background-color: $black;
 		color: $blue;
-					min-width: 290px;
+		min-width: 290px;
 
 	}
 
 	#product2 {
 		background-color: $blue;
 		color: $black;		
+		min-width: 290px;
 	}
 }
 

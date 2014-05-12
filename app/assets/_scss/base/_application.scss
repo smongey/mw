@@ -28,7 +28,7 @@
 #header-primary {
 	@include outer-container;
 	background-color: white;
-	@include pad(60px 0 4% 0);
+	@include pad(60px 0 0 0);
 	
 	#logo {
 		@include span-columns(5);
