@@ -147,3 +147,28 @@ if ($('#language-selected').is(':empty')){
     $('.menu').removeClass('showMenu');
   });
 
+
+
+
+
+// Test 
+
+  // function that determines offset
+      function positionRotator()
+      {
+        var rotator_size = 100%;
+        var initial_width = $(window).width();      
+        var offset = (rotator_size - ((initial_width - rotator_size) / .295)) * -1; /// THIS IS THE LINE
+        $("#home-rotator .cycle-slideshow").css("left",offset);       
+      }     
+      
+      // do initial positioning
+      positionRotator();    
+      
+      // re-position if screen is resized
+      $(window).resize(function() {
+        positionRotator();              
+      }); 
+
+
+
