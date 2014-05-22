@@ -158,7 +158,7 @@ if ($('#language-selected').is(':empty')){
       {
         var rotator_size = 100%;
         var initial_width = $(window).width();      
-        var offset = (rotator_size - ((initial_width - rotator_size) / .295)) * -1; /// THIS IS THE LINE
+        var offset = (rotator_size - ((initial_width - rotator_size))) * 1; /// THIS IS THE LINE
         $("#home-rotator .cycle-slideshow").css("left",offset);       
       }     
       
