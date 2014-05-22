@@ -27,9 +27,7 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-plus:before {
-	content: "\e600";
-}
+
 .icon-acc:before {
 	content: "\e601";
 }
@@ -38,4 +36,10 @@
 }
 .icon-twitter:before {
 	content: "\e603";
+}
+.icon-arrow-left:before {
+	content: "\e600";
+}
+.icon-arrow-right:before {
+	content: "\e604";
 }

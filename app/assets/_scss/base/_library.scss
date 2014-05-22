@@ -601,18 +601,19 @@ section#s4 {
 		line-height: 1.1em;
 	}
 }
-.rarr {
+
+.rarr, .larr {
 	position:absolute;
 	z-index: 50;
-	right: 2.5%;
-	top:55%;
+	top:53%;
+	@include link-blue;
+	font-size:40px;
+}
+.rarr {
+	right: 2%;
 }
 .larr {
-	position:absolute;
-	z-index: 50;
-	left: 2.5%;
-	top:55%;
-
+	left: 2%;
 }
 
 .green {
