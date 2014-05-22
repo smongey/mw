@@ -9,7 +9,7 @@ $(document).ready(function () {
 
 
 /// Menu ///
-$('li.products, li.services').on('mouseenter', function(){
+$('li.products, li.services').hoverIntent(function(){
   var link = this.getAttribute('class');
   $('#products, #services').removeClass();
   $('#'+link).addClass('active');
