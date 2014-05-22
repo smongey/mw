@@ -419,30 +419,36 @@ section#s4 {
 		}
 		
 		.plus {
-			position: absolute;
-			margin-left:-95px;
-			font-size: 50px;
-			z-index:50;
+			width:37px;
+			height:37px;
 			@include link-blue;
+			@include easing;
 			a {
 		    &:hover {
 		      color: $dark-gray;
-		      -webkit-animation: rotates 1s;
+		      transform:rotate(7deg);
+			  -ms-transform:rotate(7deg); /* IE 9 */
+			  -webkit-transform:rotate(7deg); /* Opera, Chrome, and Safari */
+
 		    }
+
 		  }
 		}
 		
 
 		.plus-wrap {
+		  position: absolute;
+		  width:37px;
+		  height:180px;
+		  margin-left:-90px !important;
 		  margin: auto;
 		  cursor:pointer;
-		  font-size: 26px !important; 
+		  font-size: 24px !important; 
 		}
 
 
 		.plus-wrap #dropdown {
-		  width: 100px; 
-		  margin-top: 20px;
+		  width: 37px; 
 		  z-index: 1000;
 		}
 
@@ -452,9 +458,9 @@ section#s4 {
 		  padding: 0; 
 		  list-style: none; 
 		  position: absolute;
-		  margin-left: -85px;
-		  margin-top: 60px; 
-		  width: 100px; 
+		  margin-top: 10px; 
+		  width: 37px;
+		  margin-left: 7px; 
 		  overflow: hidden; 
 		  height: 0; 
 		  -webkit-transition: all 0.3s ease-in; 
@@ -615,18 +621,23 @@ section#s4 {
 }
 
 a {
+
 	.blue {
 		background: $blue;
 		color:$black;
+		@include easing;
 	}
 
 	.black {
 		background: $black;
 		color:$blue;
+		@include easing;
 	}
 }
 
 a:hover {	
+
+
 	.blue {
 		background: $blue;
 		color: white;
@@ -637,4 +648,5 @@ a:hover {
 		color: $dark-gray;
 	}
 }
+
 

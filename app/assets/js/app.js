@@ -110,12 +110,13 @@ $('.tabs a').click(function(e){
 $('.plus').click(function(){
   $('.p-menu').toggleClass('showPlus');
   //$(this).toggleClass("spin");
-  $('.plus').css({'-webkit-transform':'rotate(' + 90 + 'deg)',  '-moz-transform':'rotate(' + 90 + 'deg)', '-o-transform':'rotate(' + 90 + 'deg)', '-ms-transform':'rotate(' + 90 + 'deg)', 'transform':'rotate(' + 90  + 'deg)'});
+  $(this).css({'-webkit-transform':'rotate(' + 90 + 'deg)',  '-moz-transform':'rotate(' + 90 + 'deg)', '-o-transform':'rotate(' + 90 + 'deg)', '-ms-transform':'rotate(' + 90 + 'deg)', 'transform':'rotate(' + 90  + 'deg)'});
 });
 
 
-$('.dropdown').mouseleave(function(){
+$('.plus-wrap').mouseleave(function(){
   $('.p-menu').removeClass('showPlus');
+  $('.plus').css({'-webkit-transform':'rotate(' + 0 + 'deg)',  '-moz-transform':'rotate(' + 0 + 'deg)', '-o-transform':'rotate(' + 0 + 'deg)', '-ms-transform':'rotate(' + 0 + 'deg)', 'transform':'rotate(' +  0  + 'deg)'});
 });
 
 

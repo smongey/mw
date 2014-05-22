@@ -12,6 +12,14 @@
 	        box-shadow: -1px 8px 26px -6px rgba(0, 0, 0, 0.5);
 }
 
+@mixin easing {
+  -o-transition:.3s;
+  -ms-transition:.3s;
+  -moz-transition:.3s;
+  -webkit-transition:.3s;
+  transition:.3s;
+}
+
 @mixin horizontal-li {
 	display: inline;
 	padding-right:2%;
