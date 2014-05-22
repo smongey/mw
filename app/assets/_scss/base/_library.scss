@@ -153,6 +153,137 @@ section#h4{
 }
 
 
+/* ———————————— Slider —————————————— */
+
+#home-rotator-container { width:90%;margin-left:5%; height:600px;overflow:hidden; position:relative; margin-bottom:50px;}
+#home-rotator .cycle-slideshow { width:100%; }
+#home-rotator .cycle-slideshow div  { width: 50%; height: 600px; }
+
+#home-rotator .cycle-slideshow {
+	position:absolute;
+	top:0;
+	left:0;	
+}
+
+
+
+/* Lower the opacity of non-active slides */
+#home-rotator .cycle-slide { 
+	opacity:0.4 !important;
+    filter:alpha(opacity=40); /* For IE8 and earlier */
+    transition: opacity 1.25s ease-in-out;
+   	-moz-transition: opacity 1.25s ease-in-out;
+   	-webkit-transition: opacity 1.25s ease-in-out;
+}
+
+/* Give active slide 100% opacity */
+#home-rotator .cycle-slide-active { 
+
+   	opacity:1 !important;
+    filter:alpha(opacity=100); /* For IE8 and earlier */ 
+    transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-webkit-transition: opacity 1s ease-in-out;
+}
+
+.box1, .box2 {
+	position:absolute;
+	z-index: 10;
+	max-width:290px;
+	min-width:270px;
+	max-height:290px;
+	min-height:270px;
+	padding:25px;
+}
+
+.box1 {
+	top:5%;
+	margin-left:15%;
+	
+}
+
+.image1 {
+	position:absolute;
+	z-index: 9;
+	max-width:330px;
+	max-height:330px;
+	bottom:10%;
+	margin-left:45%;
+}
+
+.box2 {
+	bottom:10%;
+	margin-left:35%;
+}
+
+.image2 {
+	position:absolute;
+	z-index: 9;
+	max-width:330px;
+	max-height:330px;
+	top:0%;
+	margin-left:10%;
+}
+
+.box1, .box2 {
+	h4{
+		font-size: 16px;
+	}
+	h2 {
+		margin-top: 30px;
+		font-size: 36px;
+		font-weight: normal;
+		line-height: 1.1em;
+	}
+}
+
+.rarr, .larr {
+	position:absolute;
+	z-index: 50;
+	top:53%;
+	@include link-blue;
+	font-size:40px;
+}
+.rarr {
+	right: 2%;
+}
+.larr {
+	left: 2%;
+}
+
+.green {
+	background: $green;
+	color:white;
+}
+
+a {
+
+	.blue {
+		background: $blue;
+		color:$black;
+		@include easing;
+	}
+
+	.black {
+		background: $black;
+		color:$blue;
+		@include easing;
+	}
+}
+
+a:hover {	
+
+
+	.blue {
+		background: $blue;
+		color: white;
+	}
+
+	.black {
+		background: $black;
+		color: $dark-gray;
+	}
+}
 
 /* ------------------------------------------------------ About -- */
 
@@ -344,7 +475,7 @@ section#s4 {
 			
 			li {
 				@include horizontal-li;
-				font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px;
+				font-size: $base-font-size * 1.25; 
 				@include link-gray;
 
 				a{
@@ -518,136 +649,5 @@ section#s4 {
 .bg-gray {background-color: $light-gray;}
 
 
-/* ———————————— TEST —————————————— */
-
-#home-rotator-container { width:90%;margin-left:5%; height:600px;overflow:hidden; position:relative; margin-bottom:50px;}
-#home-rotator .cycle-slideshow { width:100%; }
-#home-rotator .cycle-slideshow div  { width: 50%; height: 600px; }
-
-#home-rotator .cycle-slideshow {
-	position:absolute;
-	top:0;
-	left:0;	
-}
-
-
-
-/* Lower the opacity of non-active slides */
-#home-rotator .cycle-slide { 
-	opacity:0.4 !important;
-    filter:alpha(opacity=40); /* For IE8 and earlier */
-    transition: opacity 1.25s ease-in-out;
-   	-moz-transition: opacity 1.25s ease-in-out;
-   	-webkit-transition: opacity 1.25s ease-in-out;
-}
-
-/* Give active slide 100% opacity */
-#home-rotator .cycle-slide-active { 
-
-   	opacity:1 !important;
-    filter:alpha(opacity=100); /* For IE8 and earlier */ 
-    transition: opacity 1s ease-in-out;
-	-moz-transition: opacity 1s ease-in-out;
-	-webkit-transition: opacity 1s ease-in-out;
-}
-
-.box1, .box2 {
-	position:absolute;
-	z-index: 10;
-	max-width:290px;
-	min-width:270px;
-	max-height:290px;
-	min-height:270px;
-	padding:25px;
-}
-
-.box1 {
-	top:5%;
-	margin-left:15%;
-	
-}
-
-.image1 {
-	position:absolute;
-	z-index: 9;
-	max-width:330px;
-	max-height:330px;
-	bottom:10%;
-	margin-left:45%;
-}
-
-.box2 {
-	bottom:10%;
-	margin-left:35%;
-}
-
-.image2 {
-	position:absolute;
-	z-index: 9;
-	max-width:330px;
-	max-height:330px;
-	top:0%;
-	margin-left:10%;
-}
-
-.box1, .box2 {
-	h4{
-		font-size: 16px;
-	}
-	h2 {
-		margin-top: 30px;
-		font-size: 36px;
-		font-weight: normal;
-		line-height: 1.1em;
-	}
-}
-
-.rarr, .larr {
-	position:absolute;
-	z-index: 50;
-	top:53%;
-	@include link-blue;
-	font-size:40px;
-}
-.rarr {
-	right: 2%;
-}
-.larr {
-	left: 2%;
-}
-
-.green {
-	background: $green;
-	color:white;
-}
-
-a {
-
-	.blue {
-		background: $blue;
-		color:$black;
-		@include easing;
-	}
-
-	.black {
-		background: $black;
-		color:$blue;
-		@include easing;
-	}
-}
-
-a:hover {	
-
-
-	.blue {
-		background: $blue;
-		color: white;
-	}
-
-	.black {
-		background: $black;
-		color: $dark-gray;
-	}
-}
 
 
