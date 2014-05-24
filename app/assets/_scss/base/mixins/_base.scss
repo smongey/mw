@@ -172,10 +172,6 @@
 		  height: 50px;
 		  opacity: 0; 
 		  margin-left: -32px;
-		  -webkit-transition: all 0.3s ease-in; 
-		  -moz-transition: all 0.3s ease-in; 
-		  -o-transition: all 0.3s ease-in; 
-		  transition: all 0.3s ease-in; 
 		  /*-moz-transform:scale(0); */ 
 		  color: $blue;
 		  background: none; 
@@ -188,15 +184,11 @@
 
 		ul.menu li { 
 		  padding-left: 0;
-		  -webkit-transition: all 0.3s ease-in; 
-		  -moz-transition: all 0.3s ease-in; 
-		  -o-transition: all 0.3s ease-in; 
-		  transition: all 0.3s ease-in; 
+		  @include easing;
 
 		}
 
 		ul.menu li:hover { 
-		  padding-left: 10px; 
 		  color: $dark-gray;
 		}
 

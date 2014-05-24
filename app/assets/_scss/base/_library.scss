@@ -72,6 +72,7 @@ section#h3{
 	a {
 		div.h_services {
 			background: white;
+			@include easing;
 		}
 
 		&:hover {
@@ -95,6 +96,7 @@ section#h3{
 	div.s_text {
 		@include pad(3% 4% 4% 7%);
 		color: $blue;
+		@include easing;
 		@include link-blue-ul;
 		height: 100% !important;
 
@@ -174,6 +176,21 @@ section#h4{
     transition: opacity 1.25s ease-in-out;
    	-moz-transition: opacity 1.25s ease-in-out;
    	-webkit-transition: opacity 1.25s ease-in-out;
+
+   	a:hover {	
+
+
+		.blue {
+			background: $blue;
+			color:$black;
+		}
+
+		.black {
+			background: $black;
+			color:$blue;
+		}
+	}
+
 }
 
 /* Give active slide 100% opacity */
@@ -184,6 +201,20 @@ section#h4{
     transition: opacity 1s ease-in-out;
 	-moz-transition: opacity 1s ease-in-out;
 	-webkit-transition: opacity 1s ease-in-out;
+
+	a:hover {	
+
+
+	.blue {
+		background: $blue;
+		color: white;
+	}
+
+	.black {
+		background: $black;
+		color: $dark-gray;
+	}
+}
 }
 
 .box1, .box2 {
@@ -244,9 +275,11 @@ section#h4{
 	@include link-blue;
 	font-size:40px;
 }
+
 .rarr {
 	right: 2%;
 }
+
 .larr {
 	left: 2%;
 }
@@ -271,19 +304,7 @@ a {
 	}
 }
 
-a:hover {	
 
-
-	.blue {
-		background: $blue;
-		color: white;
-	}
-
-	.black {
-		background: $black;
-		color: $dark-gray;
-	}
-}
 
 /* ------------------------------------------------------ About -- */
 
@@ -367,8 +388,6 @@ section.spOne {
 				@include pad(15% 0 30% 0);
 			}		
 		}
-
-		
 	}
 	
 	#service2, #product2 {
@@ -390,6 +409,10 @@ section.spOne {
 		min-width: 290px;
 	}
 }
+
+
+
+
 
 section.spTwo {
 	@include pad(0 0 0 0);
@@ -562,7 +585,6 @@ section#s4 {
 			  -webkit-transform:rotate(7deg); /* Opera, Chrome, and Safari */
 
 		    }
-
 		  }
 		}
 		

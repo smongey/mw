@@ -30,23 +30,26 @@ function closeMenus(delay){
 }); /// End of document.ready ///
 
 
-/// Slider ///
+/// Modal ///
 $('#launch').leanModal();
 
 
 /// Slider ///
 
-/// $('#fader img:gt(0)').hide();
+$('#fader img:gt(0)').hide();
 
-/// setInterval(function(){
-/// $('#fader img:first-child')
-///  .fadeOut('fast', function(){
-///     $('#fader :first-child')
-///     .fadeIn('fast')
-///     .end()
-///     .appendTo('#fader');
-///   });
-/// }, 4000);
+setInterval(function(){
+  $('#fader img:first-child')
+  .fadeOut('fast', function(){
+    $('#fader :first-child')
+    .next('img')
+    .fadeIn('fast')
+    .end()
+    .appendTo('#fader');
+    console.log('Shōsei');
+  });
+}, 4000);
+
 
 
 /// Clocks ///
